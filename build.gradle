@@ -12,6 +12,7 @@
 plugins {
     id 'java'
     id "org.sonarqube" version "4.2.1.3168"
+    id "com.diffplug.spotless" version "6.20.0"
 }
 
 // In this section you declare where to find the dependencies of your project
