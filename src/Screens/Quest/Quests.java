@@ -58,7 +58,8 @@ public interface Quests {
     // public static final String moundQueen = "moundQueen";
     public static final String hillsGoat = "hillsGoat";
     // public static final String hillsGoat = "hillsGoat";
-    public static final String hillsBasilisk = "hillsBasilisk";
+    public static final String hillsBasilisk = "{itMonster|Wyvern|40|35|35|15|25|20|{=|pic|Hills/Wyvern.jpg}|{~|values|{=|passion|aggressive}}|{~|pack|{@|Opal|2}|{@|Garnet|2}|{@|Emerald|2}|{@|Ruby|2}|{#|Gold Apple|1}|{@|Gold Apple|2}|{%|Panic Dust|80}|{%|Panic Dust|80}}|{~|temp|{%|magic|50}}|{~|gear|{%|Raking Claws|0}|{%|Great Feathers|0}|panic}|{~|opts|swindle|control}|{itText|text|You are climbing a talus slope when a slide of rocks nearly crushes you.  Looking up, you spy a malevolent Wyvern pushing rocks off a ledge above.}}";
+    // "hillsBasilisk";
     // public static final String hillsBasilisk = "hillsBasilisk";
     public static final String hillsWyvern = "hillsWyvern";
     // public static final String hillsWyvern = "hillsWyvern";
