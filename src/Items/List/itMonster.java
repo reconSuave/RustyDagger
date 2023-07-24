@@ -85,7 +85,7 @@ public class itMonster extends itAgent {
 
     @Override // DCourt.Items.List.itAgent
     public void fixLists() {
-        fixLists();
+        super.fixLists();
         this.text = (itText) find(TEXT);
         if (this.text == null) {
             System.err.println(String.valueOf(String.valueOf(new StringBuffer("ERR: [text=null] for [").append(this).append("]"))));
