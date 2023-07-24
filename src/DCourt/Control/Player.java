@@ -1,12 +1,12 @@
 package DCourt.Control;
 
 import DCourt.Items.Item;
+import DCourt.Items.itList;
 import DCourt.Items.List.itAgent;
 import DCourt.Items.List.itHero;
-import DCourt.Items.itList;
+import DCourt.Screens.Screen;
 import DCourt.Screens.Command.arError;
 import DCourt.Screens.Command.arExit;
-import DCourt.Screens.Screen;
 import DCourt.Screens.Utility.arNotice;
 import DCourt.Static.Constants;
 import DCourt.Tools.Buffer;
@@ -132,7 +132,7 @@ public class Player implements Constants {
     }
     */
     this.hero = null;
-    String STATIC_HERO = "{itHero|Static|150|100|100|50|0|300|}";
+    String STATIC_HERO = "{itHero|Static|150|100|100|50|0|300|{~|values|{=|place|fields}}}";
     /* ADD REST API HERE */
     return readHeroValues(
         new Buffer(STATIC_HERO)); // //Loader.cgiBuffer(Loader.READHERO, this.name));
