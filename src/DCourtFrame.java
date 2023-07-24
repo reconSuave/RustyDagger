@@ -1,9 +1,18 @@
 package DCourt;
 
 import DCourt.Tools.Tools;
+/* old Event system is broken */
 import java.awt.Event;
 import java.awt.Frame;
 import java.awt.Insets;
+
+/* new Event system */
+import java.awt.AWTEvent;
+import java.awt.event.WindowEvent;
+/* https://docs.oracle.com/javase/8/docs/api/constant-values.html */
+
+
+
 
 /* loaded from: DCourt.jar:DCourt/DCourtFrame.class */
 public class DCourtFrame extends Frame {
@@ -29,6 +38,23 @@ public class DCourtFrame extends Frame {
         app.reshape(edge.left, edge.top, (int) Tools.DEFAULT_WIDTH, (int) Tools.DEFAULT_HEIGHT);
         app.init();
         app.repaint();
+    }
+
+    public void processEvent(AWTEvent e) {
+        // System.out.println("processEvent " + e.getID() + " " + e.toString());
+        switch (e.getID()) {
+            case WindowEvent.WINDOW_CLOSING:
+                dispose();
+                System.exit(0);
+                return; // true;
+            case WindowEvent.WINDOW_CLOSED:
+            case WindowEvent.WINDOW_ICONIFIED:
+            case WindowEvent.WINDOW_DEICONIFIED:
+            case WindowEvent.WINDOW_ACTIVATED:
+                repaint();
+                break;
+        }
+        super.processEvent(e);
     }
 
     public boolean handleEvent(Event e) {

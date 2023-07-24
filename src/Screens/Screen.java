@@ -321,6 +321,7 @@ public abstract class Screen extends Panel implements GameStrings, ArmsTrait {
     }
 
     public boolean action(Event e, Object o) {
+        System.out.println("Screen::action");
         if (e.target != Tools.statusPic) {
             return true;
         }

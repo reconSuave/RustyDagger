@@ -17,6 +17,8 @@ import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Image;
 
+import java.awt.AWTEvent;
+
 /* loaded from: DCourt.jar:DCourt/Screens/Command/arEntry.class */
 public class arEntry extends Screen implements GameStrings {
     FTextField nameTXF;
@@ -85,6 +87,7 @@ public class arEntry extends Screen implements GameStrings {
 
     @Override // DCourt.Screens.Screen
     public boolean action(Event e, Object o) {
+        System.out.println("action");
         if (Tools.movedAway(this)) {
             return true;
         }
@@ -102,7 +105,7 @@ public class arEntry extends Screen implements GameStrings {
     }
 
     public boolean handleEvent(Event e) {
-        boolean val = handleEvent(e);
+        boolean val = this.handleEvent(e);
         if (e.target == this.nameTXF || e.target == this.passTXF) {
             getPic(0).show(testNames());
         }
