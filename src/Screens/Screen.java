@@ -45,7 +45,7 @@ public abstract class Screen extends Panel implements GameStrings, ArmsTrait {
         this.home = from;
         this.status = true;
         this.title = name;
-        // this.pics = null;
+        this.pics = null;
         createTools();
         reshape(0, 0, (int) Tools.DEFAULT_WIDTH, (int) Tools.DEFAULT_HEIGHT);
         setFont(Tools.courtF);

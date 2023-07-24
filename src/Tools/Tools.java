@@ -41,10 +41,8 @@ public class Tools {
     public static Font bigF;
     public static Font giantF;
     static Buffer ranks;
-    public static final int DEFAULT_WIDTH = 640; //DEFAULT_WIDTH;
-    // public static final int DEFAULT_WIDTH = DEFAULT_WIDTH;
-    public static final int DEFAULT_HEIGHT = 480; // DEFAULT_HEIGHT;
-    // public static final int DEFAULT_HEIGHT = DEFAULT_HEIGHT;
+    public static final int DEFAULT_WIDTH = 400;
+    public static final int DEFAULT_HEIGHT = 300;
     static String lastWho = "not";
     public static String primeFont = null;
     static final String[] find = {"TimesRoman", "Serif", "SansSerif", "Helvitica", "Dialog"};
@@ -198,7 +196,6 @@ public class Tools {
         }
         Image tmp2 = (Image) findResource(path);
         if (tmp2 != null) {
-            System.out.println("Failed to retrieve " + path);
             return tmp2;
         }
         if (!papa.isInBrowser()) {
@@ -207,6 +204,7 @@ public class Tools {
             try {
                 tmp = papa.getToolkit().getImage(new URL(String.valueOf(String.valueOf(new StringBuffer(String.valueOf(String.valueOf(artpath))).append("/").append(path)))));
             } catch (MalformedURLException e) {
+                System.out.println("Failed to retrieve " + path);
                 return null;
             }
         }
