@@ -17,10 +17,8 @@ import java.awt.Graphics;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Wilds/arMound.class */
 public class arMound extends WildsScreen {
-    static final int FINDFIELDS = FINDFIELDS;
-    static final int FINDFIELDS = FINDFIELDS;
-    static final int FINDVORTEX = FINDVORTEX;
-    static final int FINDVORTEX = FINDVORTEX;
+    static final int FINDFIELDS = 1; // FINDFIELDS;
+    static final int FINDVORTEX = 2; // FINDVORTEX;
     static final int[][] weight = {new int[]{5, 7, 3, 8, 4}, new int[]{5, 5, 5, 7, 3}, new int[]{5, 5, 5, 4, 2}};
     static final String[][] beasts = {new String[]{"Worm", "Thief", "Mage", "Gang", "Rager"}, new String[]{"Worm", "Thief", "Mage", "Guard", "Vault"}, new String[]{"Worm", "Thief", "Mage", "Queen", "Champ"}};
     static String[] fields = {"You spy an old sign that reads: 'Town Ahead'", "You find a strand of flowers just coming into bloom.", "You pass a pond that is fresh and sweet.", "You see horse droppings and wagon tracks.", "You pass a herd of wild horses feeding quietly.", "Songbirds circle above you...", "You hear distant laughter, or is it applause?", "You pass a homestead that has been newly built..."};

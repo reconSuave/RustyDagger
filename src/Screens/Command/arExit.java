@@ -9,8 +9,8 @@ import DCourt.Tools.Tools;
 /* loaded from: DCourt.jar:DCourt/Screens/Command/arExit.class */
 public class arExit extends arNotice {
     boolean saveSuccess = false;
-    static final String deadMsg = deadMsg;
-    static final String deadMsg = deadMsg;
+    static final String deadMsg = "deadMsg";
+    // static final String deadMsg = deadMsg;
 
     public arExit(Screen from, String loc) {
         super(from);

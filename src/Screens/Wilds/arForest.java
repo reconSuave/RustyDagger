@@ -18,10 +18,10 @@ public class arForest extends WildsScreen {
     int hidden = 7;
     String[] fields = {"You spy an old sign that reads: 'Town Ahead'", "You find a strand of flowers just coming into bloom.", "You pass a pond that is fresh and sweet.", "You see horse droppings and wagon tracks.", "You pass a herd of wild horses feeding quietly.", "Songbirds circle above you...", "You hear distant laughter, or is it applause?", "You pass a homestead that has been newly built..."};
     String[] hills = {"You spy an old sign that reads: 'Djini Crossing'", "You find a strand of scrubby flowers clinging to a crevice.", "You pass a trickling mountain stream.", "You see the paw prints of some large cat.", "You spy a herd of sheep in the distance.", "Flys circle around you...", "You hear distant water, or is it wind?", "You pass a cave that smells of bear..."};
-    static final int FINDHILLS = FINDHILLS;
-    static final int FINDHILLS = FINDHILLS;
-    static final int SEARCH = SEARCH;
-    static final int SEARCH = SEARCH;
+    static final int FINDHILLS = 80;
+    // static final int FINDHILLS = FINDHILLS;
+    static final int SEARCH = 40;
+    // static final int SEARCH = SEARCH;
     static final int FINDFIELDS = 20;
     static final int[] weights = {10, 9, 8, 6, 4, 3};
     static final String[] beasts = {"Boar", "Orc", "Elf", "Gryphon", "Snot", "Unicorn"};
@@ -29,7 +29,7 @@ public class arForest extends WildsScreen {
 
     public arForest() {
         super("The Depths of the Arcane Forest");
-        setBackground(new Color(0, 128, 0));
+         setBackground(new Color(0, 128, 0));
         setForeground(new Color(128, 255, 128));
         setFont(Tools.textF);
         addPic(new Portrait("Weapon.jpg", "Smithy", 20, 170, 96, 64));

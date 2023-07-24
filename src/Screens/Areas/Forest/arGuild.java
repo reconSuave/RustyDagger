@@ -18,12 +18,12 @@ public class arGuild extends Indoors {
     static String[] someone = {null, "Silas Keep", "Sally Trader", "Bill Smith", "Aileen Suitor", "Elden Bishop", "Fenton Magus", "Gareth Shortlegs"};
     static String[] greeting = {null, "I am Fenton Magus", "Feel fear mortal", "Who violates these halls?", "Beware the Snot", "Elves are aloof", "Boar tastes like chicken", "Orcs are greedy", "Gryphons talk in riddles"};
     static final String joinMsg = String.valueOf(String.valueOf(new StringBuffer("\tYou are ushered into luxurious chambers where the guild membership awaits you, dressed in black robes to maintain anonymity.  Incense wafts past and somewhere above a gong sounds.\n\tYou think you see ").append(someone[Tools.roll(someone.length)]).append(" mingled in the crowd, but you can't be entirely sure.\n").append("\tA carpet is rolled back, revealing a blood soaked ").append("pentagram!  A goat is brought forward!! You are handed ").append("a condom!!!\n").append("\tThen they take your money and give you a guild pass. ").append("While everyone gets drunk, you are sworn to secrecy. ").append("You must never reveal the secret sacred rituals of the ").append("Free Adventurers Guild.\n\t\t\t\t\tBottoms Up!!!\n")));
-    static final String fightMsg = fightMsg;
-    static final String fightMsg = fightMsg;
-    static final String magicMsg = magicMsg;
-    static final String magicMsg = magicMsg;
-    static final String thiefMsg = thiefMsg;
-    static final String thiefMsg = thiefMsg;
+    static final String fightMsg = "fightMsg";
+    // static final String fightMsg = fightMsg;
+    static final String magicMsg = "magicMsg";
+    // static final String magicMsg = magicMsg;
+    static final String thiefMsg = "thiefMsg";
+    // static final String thiefMsg = thiefMsg;
 
     public arGuild(Screen from) {
         super(from, "The Free Adventurers Guild".concat(String.valueOf(String.valueOf(Screen.getQuests() < 5 ? " - Closed For Rituals" : ""))));

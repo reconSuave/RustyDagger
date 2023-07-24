@@ -11,12 +11,12 @@ import DCourt.Tools.Tools;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Areas/Queen/arqDice.class */
 public class arqDice extends arNotice {
-    static final String swapMsg = swapMsg;
-    static final String swapMsg = swapMsg;
-    static final String guildSign = guildSign;
-    static final String guildSign = guildSign;
-    static final String diceMsg = diceMsg;
-    static final String diceMsg = diceMsg;
+    static final String swapMsg = "swapMsg";
+    // static final String swapMsg = swapMsg;
+    static final String guildSign = "guildSign";
+    // static final String guildSign = guildSign;
+    static final String diceMsg = "diceMsg";
+    // static final String diceMsg = diceMsg;
     static final String[] diceText = {"$TB$A short time later, you are handing over a full purse of money to the gloating $lordrank$.  $HE$ slaps you on the back and shakes your hand. You may have lost, but you have gained a friend.$CR$", "$TB$You dice with great care, but lose steadily. Soon, you shake your head and cut your losses at $cost$ marks.  $lordname$ smiles broadly and offers to play again in the future.$CR$", "$TB$You dice with gay abandon.  At the end, you and the $lordrank$ break even.  $HE$ thanks you for the friendly game.$CR$", "$TB$You dice with good success. $lordname$ smiles wanly as you take half $HIS$ money.$CR$", "$TB$A short time later, you are adding a fat purse to your possessions.  It is the $lordrank$'s turn to smile bravely.$CR$"};
 
     public arqDice(Screen from) {

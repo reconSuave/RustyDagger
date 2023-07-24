@@ -201,6 +201,7 @@ public class Buffer {
         }
         int i = this.index;
         int start = this.index;
+        char c;
         while (this.index < this.size && (c = charAt(this.index)) != OPEN_SYMBOL && c != DIVIDE_SYMBOL && c != CLOSE_SYMBOL) {
             this.index++;
         }

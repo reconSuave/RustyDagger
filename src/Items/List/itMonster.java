@@ -20,17 +20,17 @@ public class itMonster extends itAgent {
     private int baseD;
     private int baseS;
     private int stance;
-    static final String PASSION = PASSION;
+    static final String PASSION = "PASSION";
    // static final String PASSION = PASSION;
-    public static final String PASSIVE = PASSIVE;
+    public static final String PASSIVE = "PASSIVE";
     //public static final String PASSIVE = PASSIVE;
-    public static final String DEFENSIVE = DEFENSIVE;
+    public static final String DEFENSIVE = "DEFENSIVE";
     //public static final String DEFENSIVE = DEFENSIVE;
-    public static final String HOSTILE = HOSTILE;
+    public static final String HOSTILE = "HOSTILE";
     //public static final String HOSTILE = HOSTILE;
-    public static final String AGGRESIVE = AGGRESIVE;
+    public static final String AGGRESIVE = "AGGRESIVE";
     //public static final String AGGRESIVE = AGGRESIVE;
-    static final String TEXT = TEXT;
+    static final String TEXT = "TEXT";
     //static final String TEXT = TEXT;
 
     public itMonster(String name) {

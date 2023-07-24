@@ -21,8 +21,8 @@ public abstract class Transfer extends Screen {
     private int limit;
     private itList purse;
     private itList stash;
-    static final String TRANSFER = TRANSFER;
-    static final String TRANSFER = TRANSFER;
+    static final String TRANSFER = "TRANSFER";
+    // static final String TRANSFER = TRANSFER;
 
     public Transfer(Screen from, String name) {
         super(from, name);

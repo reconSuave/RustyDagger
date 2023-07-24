@@ -24,8 +24,8 @@ public class arQuest extends Screen implements QuestStrings, GearTypes {
     private Options opt;
     private int weight;
     private Screen gate;
-    static final String trains = trains;
-    static final String trains = trains;
+    static final String trains = "trains";
+    // static final String trains = trains;
 
     public arQuest(Screen a, Screen n, int w, String m, itMonster b) {
         this(a, w, m, b);

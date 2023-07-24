@@ -18,18 +18,18 @@ import java.awt.Event;
 public class arCastle extends WildsScreen {
     String[] place = {"Castle", "Dunjeon", "Ocean", "Brasil", "Shang"};
     int[] power = {4, 2, 3, 4, 5};
-    static final int FIND_OCEAN = FIND_OCEAN;
-    static final int FIND_OCEAN = FIND_OCEAN;
+    static final int FIND_OCEAN = 1; //FIND_OCEAN;
+    // static final int FIND_OCEAN = FIND_OCEAN;
     static final int[][] weight = {new int[]{1}, new int[]{7, 6, 5, 4, 3, 2}, new int[]{5, 3, 2}, new int[]{6, 5, 4, 3, 2}, new int[]{6, 7, 2, 6, 5, 3, 2}};
     static final String[][] beasts = {new String[]{"Guard"}, new String[]{"Rodent", "Snot", "Rager", "Gang", "Troll", "Mage"}, new String[]{"Traders", "Serpent", "Mermaid"}, new String[]{"Harpy", "Fighter", "Golem", "Medusa", "Hero"}, new String[]{"Gunner", "Peasant", "Ninja", "Plague", "Shogun", "Panda", "Samurai"}};
-    static final String DOCKS_FAILURE = DOCKS_FAILURE;
-    static final String DOCKS_FAILURE = DOCKS_FAILURE;
-    static final String DOCKS_SUCCESS = DOCKS_SUCCESS;
-    static final String DOCKS_SUCCESS = DOCKS_SUCCESS;
-    static final String DOCKS_BRASIL = DOCKS_BRASIL;
-    static final String DOCKS_BRASIL = DOCKS_BRASIL;
-    static final String DOCKS_SHANG = DOCKS_SHANG;
-    static final String DOCKS_SHANG = DOCKS_SHANG;
+    static final String DOCKS_FAILURE = "DOCKS_FAILURE";
+    // static final String DOCKS_FAILURE = DOCKS_FAILURE;
+    static final String DOCKS_SUCCESS = "DOCKS_SUCCESS";
+    // static final String DOCKS_SUCCESS = DOCKS_SUCCESS;
+    static final String DOCKS_BRASIL =" DOCKS_BRASIL";
+    // static final String DOCKS_BRASIL = DOCKS_BRASIL;
+    static final String DOCKS_SHANG = "DOCKS_SHANG";
+    // static final String DOCKS_SHANG = DOCKS_SHANG;
     static final String[] oceans = {"You spy an bouy marking low waters...", "You find a barrel floating on the waves...", "You pass a stretch of choking seaweed.", "You catch an odd fish with bulging eyeballs...", "A dolphin swims circles around your ship...", "Seagulls circle above you...", "You hear distance groans from some sea beast...", "You find planks from a ship that broke apart..."};
 
     public arCastle() {

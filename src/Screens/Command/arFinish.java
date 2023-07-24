@@ -21,8 +21,8 @@ public class arFinish extends Screen implements Constants {
     itList start = Screen.getPlayer().getStart();
     static final String[] path = {"Final/Bed.jpg", "Final/Floor.jpg", "Final/Camp.jpg", "Final/Dead.jpg"};
     static final int[] which = {0, 0, 0, 1, 1, 2, 2, 2, 2, 2, 2};
-    static final String EQL = EQL;
-    static final String EQL = EQL;
+    static final String EQL = "EQL";
+    // static final String EQL = EQL;
 
     public arFinish() {
         super("Time to Finally Rest");

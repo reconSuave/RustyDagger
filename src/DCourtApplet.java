@@ -17,7 +17,7 @@ public class DCourtApplet extends Applet {
     private String cgibin;
     private String today;
     private Tools tools;
-    static final String badAccess = badAccess;
+    static final String badAccess = "badAccess";
     private boolean inBrowser = true;
     private boolean playtest = false;
     Screen region = null;

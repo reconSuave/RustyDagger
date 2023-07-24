@@ -7,12 +7,12 @@ import java.awt.Insets;
 
 /* loaded from: DCourt.jar:DCourt/DCourtFrame.class */
 public class DCourtFrame extends Frame {
-    static final String config = config;
-    static final String config = config;
-    static final String cgibin = cgibin;
-    static final String cgibin = cgibin;
-    static final String artpath = artpath;
-    static final String artpath = artpath;
+    static final String config = "config";
+    // static final String config = config;
+    static final String cgibin = "cgibin";
+    //  static final String cgibin = cgibin;
+    static final String artpath = "artpath";
+    // static final String artpath = artpath;
 
     public DCourtFrame(String msg) {
         super(msg);

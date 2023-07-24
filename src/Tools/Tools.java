@@ -42,9 +42,9 @@ public class Tools {
     public static Font giantF;
     static Buffer ranks;
     public static final int DEFAULT_WIDTH = DEFAULT_WIDTH;
-    public static final int DEFAULT_WIDTH = DEFAULT_WIDTH;
+    // public static final int DEFAULT_WIDTH = DEFAULT_WIDTH;
     public static final int DEFAULT_HEIGHT = DEFAULT_HEIGHT;
-    public static final int DEFAULT_HEIGHT = DEFAULT_HEIGHT;
+    // public static final int DEFAULT_HEIGHT = DEFAULT_HEIGHT;
     static String lastWho = "not";
     public static String primeFont = null;
     static final String[] find = {"TimesRoman", "Serif", "SansSerif", "Helvitica", "Dialog"};

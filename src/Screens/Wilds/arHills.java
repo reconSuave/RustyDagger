@@ -17,10 +17,8 @@ import java.awt.Event;
 public class arHills extends WildsScreen {
     int hidden = 7;
     String[] forests = {"You spy an old sign that reads: 'Danger!'", "You find a human skull with an arrow embedded in it...", "You pass a pond that is obviously poisonous.", "You find animal droppings. There are chainmail links in it...", "You find a horse skeleton. Something big was eating it...", "Vultures circle above you...", "You hear distance howling, or is it screaming?", "You pass a homestead that has been burned to the ground..."};
-    static final int FINDFOREST = FINDFOREST;
-    static final int FINDFOREST = FINDFOREST;
-    static final int SEARCH = SEARCH;
-    static final int SEARCH = SEARCH;
+    static final int FINDFOREST = 1; // FINDFOREST;
+    static final int SEARCH = 2; // SEARCH;
     static final int[] weights = {7, 5, 5, 4, 3, 3};
     static final String[] beasts = {"Goat", "Basilisk", "Troll", "Wyvern", "Giant", "Sphinx"};
     static final String[] found = {"The Jewel Exchange atop a misty peak!\n", "Djinni's Magic Shop floating on a cloud!\n", "A dangerous shaft leading to the Abandoned Mines!\n"};

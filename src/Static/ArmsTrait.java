@@ -5,39 +5,40 @@ import DCourt.Tools.Tools;
 
 /* loaded from: DCourt.jar:DCourt/Static/ArmsTrait.class */
 public interface ArmsTrait {
-    public static final String HEAD = HEAD;
+    public static final String HEAD = "HEAD";
     //public static final String HEAD = HEAD;
     //public static final String BODY = BODY;
-    public static final String BODY = BODY;
+    public static final String BODY = "BODY";
    // public static final String RIGHT = RIGHT;
-    public static final String RIGHT = RIGHT;
-    public static final String LEFT = LEFT;
+    public static final String RIGHT = "RIGHT";
+    public static final String LEFT = "LEFT";
     //public static final String LEFT = LEFT;
     //public static final String FEET = FEET;
-    public static final String FEET = FEET;
+    public static final String FEET = "FEET";
     //public static final String SECRET = SECRET;
-    public static final String SECRET = SECRET;
-    public static final String DECAY = DECAY;
+    public static final String SECRET = "SECRET";
+    public static final String DECAY = "DECAY";
     //public static final String DECAY = DECAY;
-    public static final String CURSED = CURSED;
+    public static final String CURSED = "CURSED";
     //public static final String CURSED = CURSED;
-    public static final String CURSE = CURSE;
+    public static final String CURSE = "CURSE";
     //public static final String CURSE = CURSE;
-    public static final String GLOWS = GLOWS;
+    public static final String GLOWS = "GLOWS";
     //public static final String GLOWS = GLOWS;
-    public static final String FLAME = FLAME;
+    public static final String FLAME = "FLAME";
     //public static final String FLAME = FLAME;
-    public static final String BLESS = BLESS;
+    public static final String BLESS = "BLESS";
     //public static final String BLESS = BLESS;
-    public static final String LUCKY = LUCKY;
-    //public static final String LUCKY = LUCKY;
+    //
+    public static final String LUCKY = "LUCKY";
+
     public static final String DISEASE = "Disease";
     public static final String BLIND = "Blind";
     public static final String PANIC = "Panic";
     //public static final String BLAST = BLAST;
-    public static final String BLAST = BLAST;
+    public static final String BLAST = "BLAST";
     //public static final String ENCHANT = ENCHANT;
-    public static final String ENCHANT = ENCHANT;
+    public static final String ENCHANT = "ENCHANT";
     public static final String[] traitLabel = {HEAD, BODY, FEET, RIGHT, LEFT, DECAY, SECRET, CURSED, CURSE, GLOWS, FLAME, BLESS, LUCKY, "Disease", "Blind", "Panic", BLAST, ENCHANT};
     public static final itList traitList = new itList("Traits", traitLabel);
     public static final int VISIBLE_TRAIT = traitList.firstOf(CURSE);

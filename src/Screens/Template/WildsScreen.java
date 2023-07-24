@@ -9,12 +9,12 @@ import DCourt.Tools.Tools;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Template/WildsScreen.class */
 public abstract class WildsScreen extends Screen {
-    public static final String TOO_TIRED = TOO_TIRED;
-    public static final String TOO_TIRED = TOO_TIRED;
-    public static final String NEED_ROPE = NEED_ROPE;
-    public static final String NEED_ROPE = NEED_ROPE;
-    public static final String NEED_LIGHT = NEED_LIGHT;
-    public static final String NEED_LIGHT = NEED_LIGHT;
+    public static final String TOO_TIRED = "TOO_TIRED";
+    // public static final String TOO_TIRED = TOO_TIRED;
+    public static final String NEED_ROPE = "NEED_ROPE";
+    // public static final String NEED_ROPE = NEED_ROPE;
+    public static final String NEED_LIGHT = "NEED_LIGHT";
+    // public static final String NEED_LIGHT = NEED_LIGHT;
 
     public abstract Screen pickQuest(int i);
 

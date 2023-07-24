@@ -27,10 +27,10 @@ public class arRanking extends Screen {
     int which = 0;
     FScrollbar scroll;
     static final int SHOWROWS = 12;
-    static final int SHOWLEFT = SHOWLEFT;
-    static final int SHOWLEFT = SHOWLEFT;
-    static final int SHOWWIDE = SHOWWIDE;
-    static final int SHOWWIDE = SHOWWIDE;
+    static final int SHOWLEFT = 13; //SHOWLEFT;
+    // static final int SHOWLEFT = SHOWLEFT;
+    static final int SHOWWIDE = 14; // SHOWWIDE;
+    // static final int SHOWWIDE = SHOWWIDE;
     static final int CLAN_DISPLAY = 4;
     static final String[] rankStr = {Constants.FAME, Constants.SKILL, Constants.RANK, Constants.GUILD, Constants.CLAN};
     static final String[] office = {"Queens Champion", "Captain of the Guard", "Chief Counselor", "Guild Master", "Clan Rankings"};

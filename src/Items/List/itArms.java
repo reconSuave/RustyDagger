@@ -12,7 +12,7 @@ public class itArms extends itList implements ArmsTrait {
     private itCount aval;
     private itCount dval;
     private itCount sval;
-    static final int MEGATWEAK = MEGATWEAK;
+    static final int MEGATWEAK = 2048;
     //static final int MEGATWEAK = MEGATWEAK;
     static final int DECAY_FACTOR = 12;
 
@@ -24,8 +24,10 @@ public class itArms extends itList implements ArmsTrait {
         this(id, 0, 0, 0);
     }
 
-    public itArms(String id, int atk, int def, int skl) {
-        super(id);
+    public itArms(String _id, int atk, int def, int skl) {
+        super(_id);
+        /*
+         */
         setVals(atk, def, skl);
     }
 

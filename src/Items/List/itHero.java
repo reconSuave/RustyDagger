@@ -22,18 +22,18 @@ public class itHero extends itAgent {
     private String best;
     private String leader;
     private int raise;
-    static final String PLACE = PLACE;
+    static final String PLACE = "PLACE";
 
     static final int VERSION = 10;
-    static final String STORE = STORE;
+    static final String STORE = "STORE";
    // static final String DUMP = DUMP;
-    static final String DUMP = DUMP;
+    static final String DUMP = "DUMP";
    // static final String LOOKS = LOOKS;
-    static final String LOOKS = LOOKS;
+    static final String LOOKS = "LOOKS";
     private static Portrait picture = new Portrait("Faces/Hero.jpg", 0, 0, 80, 80);
-    static final String clanMsg = clanMsg;
+    static final String clanMsg = "clanMsg";
     //static final String clanMsg = clanMsg;
-    static final String flameMsg = flameMsg;
+    static final String flameMsg = "flameMsg";
     //static final String flameMsg = flameMsg;
     private int sessionID = 0;
     private itList store = new itList(STORE);

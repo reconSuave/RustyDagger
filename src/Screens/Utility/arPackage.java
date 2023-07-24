@@ -20,8 +20,8 @@ public class arPackage extends Transfer {
     Button send;
     FTextField name;
     String[] breaksound = {"***KEERASH***", "***SMASHOLA***", "***BANG+CRACK+POP***", "+++SHLORP-bump+++", "***CRASH***...tinkle...", "HEE-HAW! HEE HAW!", "***KABADABOOM***", "...bzzzzzzzzzzzz...", "AIYEEEE!!!!"};
-    static final String mailSent = mailSent;
-    static final String mailSent = mailSent;
+    static final String mailSent = "mailSent";
+    // static final String mailSent = mailSent;
 
     public arPackage(Screen from) {
         super(from, String.valueOf(String.valueOf(from.getTitle())).concat(" Mail Room"));

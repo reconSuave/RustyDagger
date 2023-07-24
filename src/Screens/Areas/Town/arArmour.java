@@ -11,8 +11,8 @@ import DCourt.Tools.Tools;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Areas/Town/arArmour.class */
 public class arArmour extends Smith {
-    static final int MAXFIX_POWER = MAXFIX_POWER;
-    static final int MAXFIX_POWER = MAXFIX_POWER;
+    static final int MAXFIX_POWER = 0; // MAXFIX_POWER;
+    // static final int MAXFIX_POWER = MAXFIX_POWER;
     static String[] greeting = {null, "What's your sign?", "Hiya Sonny!", "Watcha Got?", "Hey there, sexy", "Rub me feet, willya?", "Armour is good...", "C'mon sexy, smile", "Cover ever'thing", "Back fer more?", "Need some shoes?"};
     public static final String[] stock = {"Clothes", "Leather Jacket", "Brigandine", "Chain Suit", "Scale Suit", "Buckler", "Targe", "Shield", "Spike Shield", "Sandals", "Shoes", "Boots", "Leather Cap", "Pot Helm", "Chain Coif"};
 
