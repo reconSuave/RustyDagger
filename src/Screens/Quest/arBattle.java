@@ -331,6 +331,7 @@ public class arBattle extends Screen implements GearTypes {
                     this.mob.subPack(GearTypes.APPLE, 1);
                 }
             }
+	    /* unreacheable !
             while (true) {
                 num2--;
                 if (num2 < 0) {
@@ -338,7 +339,7 @@ public class arBattle extends Screen implements GearTypes {
                 }
                 this.mob.doHeal();
                 this.mob.subPack(GearTypes.SALVE, 1);
-            }
+            }*/
         }
         int val2 = ma.getCount(GearTypes.TROLL);
         if (val2 > 0) {

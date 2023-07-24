@@ -29,8 +29,7 @@ sourceSets {
 jar {
     manifest {
         attributes(
-            'Author': 'Michael Bonfils',
-            'Main-Class': 'SampleFrame',
+            'Main-Class': 'DCourt.DCourtFrame',
         )
     }
 }

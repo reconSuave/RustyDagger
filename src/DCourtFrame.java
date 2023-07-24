@@ -44,6 +44,6 @@ public class DCourtFrame extends Frame {
                 repaint();
                 break;
         }
-        return handleEvent(e);
+        return super.handleEvent(e);
     }
 }

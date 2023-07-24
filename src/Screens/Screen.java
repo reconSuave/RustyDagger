@@ -76,7 +76,7 @@ public abstract class Screen extends Panel implements GameStrings, ArmsTrait {
     }
 
     public void repaint() {
-        repaint();
+        super.repaint();
         if (this.status) {
             Tools.statusPic.repaint();
         }

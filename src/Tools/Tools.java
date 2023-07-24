@@ -41,9 +41,9 @@ public class Tools {
     public static Font bigF;
     public static Font giantF;
     static Buffer ranks;
-    public static final int DEFAULT_WIDTH = DEFAULT_WIDTH;
+    public static final int DEFAULT_WIDTH = 640; //DEFAULT_WIDTH;
     // public static final int DEFAULT_WIDTH = DEFAULT_WIDTH;
-    public static final int DEFAULT_HEIGHT = DEFAULT_HEIGHT;
+    public static final int DEFAULT_HEIGHT = 480; // DEFAULT_HEIGHT;
     // public static final int DEFAULT_HEIGHT = DEFAULT_HEIGHT;
     static String lastWho = "not";
     public static String primeFont = null;
@@ -193,10 +193,12 @@ public class Tools {
         Image tmp;
         String artpath = papa.getArtpath();
         if (path == null) {
+            System.out.println("getArtpath() returned null");
             return null;
         }
         Image tmp2 = (Image) findResource(path);
         if (tmp2 != null) {
+            System.out.println("Failed to retrieve " + path);
             return tmp2;
         }
         if (!papa.isInBrowser()) {
