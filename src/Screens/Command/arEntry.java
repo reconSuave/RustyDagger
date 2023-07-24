@@ -17,10 +17,11 @@ import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Image;
 
-import java.awt.AWTEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.KeyEvent;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Command/arEntry.class */
-public class arEntry extends Screen implements GameStrings {
+public class arEntry extends Screen implements GameStrings, KeyListener {
     FTextField nameTXF;
     FTextField passTXF;
     Button lists;
@@ -112,6 +113,18 @@ public class arEntry extends Screen implements GameStrings {
         return val;
     }
 
+    public void keyPressed(KeyEvent e) {
+        getPic(0).show(testNames());
+    }
+
+    public void keyReleased(KeyEvent e) {
+    }
+
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+
     Screen EnterGame() {
         String name = scoreString(this.nameTXF.getText());
         String pass = scoreString(this.passTXF.getText());
@@ -169,11 +182,15 @@ public class arEntry extends Screen implements GameStrings {
         this.nameTXF.setBackground(entryC);
         this.nameTXF.setForeground(Color.black);
         this.nameTXF.reshape(100, 230, 120, 22);
+        this.nameTXF.addKeyListener(this);
+
         this.passTXF = new FTextField(15);
         this.passTXF.setEchoCharacter('*');
         this.passTXF.setBackground(entryC);
         this.passTXF.setForeground(Color.black);
         this.passTXF.reshape(100, 260, 120, 22);
+        this.passTXF.addKeyListener(this);
+
         this.lists = new Button("Lists");
         this.lists.reshape(340, 232, 55, 20);
         this.credits = new Button("Credits");

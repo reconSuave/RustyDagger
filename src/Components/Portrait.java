@@ -109,6 +109,6 @@ public class Portrait extends Canvas {
 
     public boolean imageUpdate(Image img, int flags, int x, int y, int w, int h) {
         repaint();
-        return imageUpdate(img, flags, x, y, w, h);
+        return super.imageUpdate(img, flags, x, y, w, h);
     }
 }

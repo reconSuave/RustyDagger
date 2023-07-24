@@ -9,7 +9,6 @@ import java.awt.Insets;
 /* new Event system */
 import java.awt.AWTEvent;
 import java.awt.event.WindowEvent;
-/* https://docs.oracle.com/javase/8/docs/api/constant-values.html */
 
 
 
@@ -17,11 +16,8 @@ import java.awt.event.WindowEvent;
 /* loaded from: DCourt.jar:DCourt/DCourtFrame.class */
 public class DCourtFrame extends Frame {
     static final String config = "config";
-    // static final String config = config;
     static final String cgibin = "cgibin";
-    //  static final String cgibin = cgibin;
     static final String artpath = "artpath";
-    // static final String artpath = artpath;
 
     public DCourtFrame(String msg) {
         super(msg);
@@ -41,7 +37,7 @@ public class DCourtFrame extends Frame {
     }
 
     public void processEvent(AWTEvent e) {
-        // System.out.println("processEvent " + e.getID() + " " + e.toString());
+        /* https://docs.oracle.com/javase/8/docs/api/constant-values.html */
         switch (e.getID()) {
             case WindowEvent.WINDOW_CLOSING:
                 dispose();
@@ -55,21 +51,5 @@ public class DCourtFrame extends Frame {
                 break;
         }
         super.processEvent(e);
-    }
-
-    public boolean handleEvent(Event e) {
-        switch (e.id) {
-            case 201:
-                dispose();
-                System.exit(0);
-                return true;
-            case 202:
-            case 203:
-            case 204:
-            case 205:
-                repaint();
-                break;
-        }
-        return super.handleEvent(e);
     }
 }
