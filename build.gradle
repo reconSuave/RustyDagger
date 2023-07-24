@@ -17,8 +17,7 @@ plugins {
 
 // In this section you declare where to find the dependencies of your project
 repositories {
-    // You can declare any Maven/Ivy/file repository here.
-    jcenter()
+    mavenCentral()
 }
 
 // sqp_a82ad202fef33b90e263e3bf09529f61362193cb
@@ -52,4 +51,10 @@ dependencies {
     // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
     // 'test.useTestNG()' to your build script.
     // testCompile 'junit:junit:4.12'
+}
+
+spotless {
+  java {
+    googleJavaFormat()
+  }
 }
