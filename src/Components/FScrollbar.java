@@ -117,11 +117,11 @@ public class FScrollbar extends FTools {
     }
 
     public void reshape(Rectangle r) {
-        reshape(r.x, r.y, r.width, r.height);
+        super.reshape(r.x, r.y, r.width, r.height);
     }
 
     public void reshape(int x, int y, int w, int h) {
-        reshape(x, y, w, h);
+        super.reshape(x, y, w, h);
         fixBody();
         repaint();
     }

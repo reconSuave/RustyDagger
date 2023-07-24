@@ -29,30 +29,23 @@ public class arQueen extends Indoors {
     Button invest;
     static final int MAXIMUM_RANK = 9;
     static final int INVEST_DANGER = 9;
-    static final int PETITION_COST = 10; // PETITION_COST;
-    // static final int PETITION_COST = PETITION_COST;
+    static final int PETITION_COST = 5000;
     static final int PETITION_QUEST = 3;
-    static final int INVEST_COST = 4; // INVEST_COST;
-    // static final int INVEST_COST = INVEST_COST;
+    static final int INVEST_COST = 100000;
     static final int INVEST_QUEST = 5;
     static final String[] text = {"{1}Dice", "{1}Mingle", "{1}Boast", "{1}Game"};
     static final String[] greeting = {null, "What a clever little man.", "I'm getting bored.", "Tell me a story.", "Where have you been?", "Give me a good reason.", "OFF WITH HIS HEAD!", "Show me something special.", "You are boring me.", "Why should I listen?", "Give me a good jape."};
-    public static final String investMsg = "investMsg";
-    // public static final String investMsg = investMsg;
-    public static final String feelGood = "feelGood";
-    // public static final String feelGood = feelGood;
-    public static final String feelBad = "feelBad";
-    // public static final String feelBad = feelBad;
+    public static final String investMsg = "$TB$You enter into business with one $lordname$ , a $MAN$ of good repute.  $HE$ is investing in $jobname$.  If all goes well, you should see a return of $reward$ marks for your investment.  The risks are $risk$ and so are the rewards.$CR$$TB$The $lordrank$ will contact you upon the morrow with word of the results.$CR$";
+    public static final String feelGood = "$CR$$TB$(You have a bad feeling about this)$CR$";
+    public static final String feelBad = "$CR$$TB$(You have a good feeling about this)$CR$";
     public static final String[] investFeel = {feelGood, feelGood, "", feelBad, feelBad};
-    public static final String investNote = "investNote";
-    // public static final String investNote = investNote;
+    public static final String investNote = "$today$$CR$My Good $rank$ $name$,$CR$I write to inform you of events concerning our mutual venture.";
     public static final String[] investText = {"$today$$CR$This letter is to inform you that the $lordname$ was beaten senseless and robbed utterly while engaged in business. $CR$Sincerely,$CR$$official$", "Things went very poorly. I am deeply ashamed to report substantial losses. Pray accept this small sum as my sole apology.$CR$Deepest Regrets, $CR$$lordname$ ", "There were several setbacks to the venture we have planned.  I am able to return your original investment, but no more. $CR$Regretfully, $CR$$lordname$", "Business has progressed exactly as expected. Your share of the proceeds accompany this letter. $CR$Ever yours, $CR$$lordname$", "As the purse accompanying this missive indicates, things went extremely well. You will find an extra $bonus$ marks above the amount I promised you. $CR$Thank you for your trust.$CR$$lordname$"};
     public static final String[][] investJobs = {new String[]{"the Oat Harvest", "the Wheat Harvest", "the Barley Harvest"}, new String[]{"the Grape Harvest", "Hog Futures", "Wool Futures"}, new String[]{"a Cargo of Wine", "a Cargo of Beer", "a Cargo of Dried Meat"}, new String[]{"the Leather Works", "the Iron Works", "the Lumber Yard"}, new String[]{"a Flower Shop", "a Pastry Shop", "a Fine Theatre"}, new String[]{"a Cargo of Weapons", "a Cargo of Farm Tools", "A Cargo of Glassware"}, new String[]{"a Cargo of Artwork", "a Cargo of Fine Wines", "a Cargo of Jewelry"}, new String[]{"bribes to the Chief Counselor", "bribes to the Guard Captain", "bribes to the Guild Master"}};
     public static final String[] investRisk = {"marginal", "minimal", "small", "moderate", "large", "substantial", "massive", "incredible"};
     public static final String[] officialTitle = {"Captain ", "Doctor ", "Mayor ", "Abbot ", "Lieutenant ", "Officer ", "Father ", "Brother ", "Sherrif", "Alderman", "Sultan", "Major"};
     public static final String[] petitionText = {"$TB$The queen laughs coldly at your ambitions. $CR$$TB$\"The rank of $newrank$ is at such far remove that you may find the stars to be a closer companion.  Do not even dare to speak to me again until you have a gift worthy of my attentions.\" $CR$$TB$She signals her guards who drag you out and throw you from the castle. $CR$", "$TB$The queen stares at you as if you were a stain on the carpet. $CR$$TB$\"The rank of $newrank$ is far from your grasp at this moment.  Go forth, do good works to curry favor with this court.\" $CR$$TB$She turns her gaze away from you in a clear gesture of dismissal. $CR$", "$TB$Her majesty smiles shyly. $CR$$TB$\"You have made great inroads with this court.  Many nobles find you a pleasing companion and speak favorably of you.  The rank of $newrank$ is not an impossible dream, but still requires more work.\" $CR$$TB$The queen acknowledges your parting bow, and turns to whisper giggling comments to her ladies in waiting. $CR$", "$TB$The queen smiles on you benignly. $CR$$TB$\"The rank of $newrank$ is not far from your grasp.  If you could gain the greatest approval of my counselors and nobles, I could be persuaded to grant you a new title.\" $CR$$TB$The queen turns her attention to matters of state, but you suspect your case is on her mind. $CR$", "$TB$$TB$*** Social Standing Raised *** $CR$$TB$Proclamations are sent accross the land: $CR$ $CR$$TB$\"Her majesty Queen Beth is pleased to declare that one of her most faithful and loyal of subjects, the honorable $newrank$ $name$ ;  has earned her deepest gratitude and the respect of the Dragon Court as a whole. $CR$ $CR$$TB$\"In Recognition of his long standing good works, we are delighted to declare that $name$ shall henceforth be known as:  $CR$ $CR$$TB$$TB$$TB$$TB$\" $newrank$ $name$ \"!!"};
-    static final String recommendMsg = "recommendMsg";
-    // static final String recommendMsg = recommendMsg;
+    static final String recommendMsg = "$CR$Perhaps you could speak with the Queen...$CR$";
 
     public arQueen(Screen from) {
         super(from, "Queen Beth reigns over Dragon Court");

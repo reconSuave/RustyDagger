@@ -22,19 +22,15 @@ public class itHero extends itAgent {
     private String best;
     private String leader;
     private int raise;
-    static final String PLACE = "PLACE";
+    static final String PLACE = "place";
 
     static final int VERSION = 10;
-    static final String STORE = "STORE";
-   // static final String DUMP = DUMP;
-    static final String DUMP = "DUMP";
-   // static final String LOOKS = LOOKS;
-    static final String LOOKS = "LOOKS";
+    static final String STORE = "store";
+    static final String DUMP = "dump";
+    static final String LOOKS = "looks";
     private static Portrait picture = new Portrait("Faces/Hero.jpg", 0, 0, 80, 80);
-    static final String clanMsg = "clanMsg";
-    //static final String clanMsg = clanMsg;
-    static final String flameMsg = "flameMsg";
-    //static final String flameMsg = flameMsg;
+    static final String clanMsg = "\tWith the unsealing of the grant, you become a staunch member of the [ $clan$ ], able to call upon them for power and assistance.  Mystical energies course through your being, making betrayal an impossible concept.\n";
+    static final String flameMsg = "\tThis grant would be a betrayal of your clan. It bursts into flames, singeing your hands and blinding you.\n";
     private int sessionID = 0;
     private itList store = new itList(STORE);
     private itList looks = new itList(LOOKS);
@@ -78,7 +74,7 @@ public class itHero extends itAgent {
 
     @Override // DCourt.Items.List.itAgent
     public void fixLists() {
-        fixLists();
+        super.fixLists();
         this.lastPlay = findValue("Date");
         this.store = findList(STORE);
         this.looks = findList(LOOKS);

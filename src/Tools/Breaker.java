@@ -10,8 +10,7 @@ public class Breaker {
     boolean indent;
     FontMetrics fm;
     String[] lines = new String[0];
-    static final String TAB = "TAB";
-    // static final String TAB = TAB;
+    static final String TAB = "\t";
 
     public Breaker(String msg, FontMetrics fm, int wide, boolean indent) {
         this.buf = new Buffer(msg);

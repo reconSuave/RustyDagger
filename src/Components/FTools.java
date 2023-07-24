@@ -47,7 +47,7 @@ public class FTools extends Panel {
     }
 
     public void setFont(Font f) {
-        setFont(f);
+        super.setFont(f);
         this.fmet = getFontMetrics(f);
     }
 

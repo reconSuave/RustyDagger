@@ -24,8 +24,7 @@ public class arQuest extends Screen implements QuestStrings, GearTypes {
     private Options opt;
     private int weight;
     private Screen gate;
-    static final String trains = "trains";
-    // static final String trains = trains;
+    static final String trains = "\tYou are taken to a remote location in the forest where you undergo a bizzare training regimen.  You shower naked beneath a freezing waterfall.  You eat nothing but rice and fish.  You must sit for hours in a lotus position while  contemplating the sound of a single hand clapping.\n\tWhen the time comes to draw your blade, you find that an unheralded clarity of vision guides your stroke.\n\t\t\tYour Training is Complete\n\n<<< You Have Gained in Samurai Skill >>>\n\n\t*** The Cost to Your Body is Severe ***\n\t*** -3 Guts  -3 Wits  -3 Charm ***\n";
 
     public arQuest(Screen a, Screen n, int w, String m, itMonster b) {
         this(a, w, m, b);

@@ -16,8 +16,7 @@ import java.awt.Event;
 /* loaded from: DCourt.jar:DCourt/Screens/Wilds/arField.class */
 public class arField extends WildsScreen {
     String[] forests = {"You spy an old sign that reads: 'Danger!'", "You find a human skull with an arrow embedded in it...", "You pass a pond that is obviously poisonous.", "You find animal droppings. There are chainmail links in it...", "You find a horse skeleton. Something big was eating it...", "Vultures circle above you...", "You hear distance howling, or is it screaming?", "You pass a homestead that has been burned to the ground..."};
-    static final int FINDFOREST = 2; //FINDFOREST;
-    // static final int FINDFOREST = FINDFOREST;
+    static final int FINDFOREST = 40;;
     static final int[] hiweight = {8, 6, 4, 5, 2, 5, 2};
     static final int[] loweight = {12, 10, 6, 10, 2, 1, 0};
     static final String[] beasts = {"Rodent", "Goblin", "Centaur", Constants.MERCHANT, "Wizard", Constants.GYPSY, "Soldier"};

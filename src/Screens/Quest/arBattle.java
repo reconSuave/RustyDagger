@@ -27,8 +27,7 @@ public class arBattle extends Screen implements GearTypes {
     itHero hero = Screen.getHero();
     itMonster mob;
     arQuest quest;
-    static final String ABUF = "ABUF";
-    // static final String ABUF = ABUF;
+    static final String ABUF = "    ---";
     static final String[] berzerks = {"With a scream of fury, you tear into it!", "Foaming at the mouth you leap onto it!", "You attack like a whirlwind, screaming!", "KILL!  KILL!  KILL!  KILL!  KILL!  KILL!"};
     static final String[] backstabs = {"You pat it on the back with a knife", "You point down \"Hey your shoes are untied\"", "You pretend to leave, but circle back!", "I'm your best friend - DIE! DIE! DIE!"};
 

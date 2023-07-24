@@ -27,10 +27,8 @@ public class arRanking extends Screen {
     int which = 0;
     FScrollbar scroll;
     static final int SHOWROWS = 12;
-    static final int SHOWLEFT = 13; //SHOWLEFT;
-    // static final int SHOWLEFT = SHOWLEFT;
-    static final int SHOWWIDE = 14; // SHOWWIDE;
-    // static final int SHOWWIDE = SHOWWIDE;
+    static final int SHOWLEFT = 220;
+    static final int SHOWWIDE = 55;
     static final int CLAN_DISPLAY = 4;
     static final String[] rankStr = {Constants.FAME, Constants.SKILL, Constants.RANK, Constants.GUILD, Constants.CLAN};
     static final String[] office = {"Queens Champion", "Captain of the Guard", "Chief Counselor", "Guild Master", "Clan Rankings"};
@@ -48,7 +46,7 @@ public class arRanking extends Screen {
 
     @Override // DCourt.Screens.Screen
     public void init() {
-        init();
+        super.init();
         Buffer buf = Tools.getRankings();
         if (buf == null || buf.isError()) {
             Tools.setRegion(new arNotice(getHome(), "Error Reading Rankfile:\n".concat(String.valueOf(String.valueOf(buf.line())))));

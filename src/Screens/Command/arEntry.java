@@ -19,9 +19,13 @@ import java.awt.Image;
 
 import java.awt.event.KeyListener;
 import java.awt.event.KeyEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseEvent;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Command/arEntry.class */
-public class arEntry extends Screen implements GameStrings, KeyListener {
+public class arEntry extends Screen implements GameStrings, KeyListener, ActionListener, MouseListener {
     FTextField nameTXF;
     FTextField passTXF;
     Button lists;
@@ -86,6 +90,7 @@ public class arEntry extends Screen implements GameStrings, KeyListener {
         g.drawString("Password", 28, 262 + val2);
     }
 
+    /*
     @Override // DCourt.Screens.Screen
     public boolean action(Event e, Object o) {
         System.out.println("action");
@@ -103,8 +108,47 @@ public class arEntry extends Screen implements GameStrings, KeyListener {
         }
         Tools.setRegion(new arNotice(this, GameStrings.creditText));
         return false;
+    }*/
+
+    @Override // Dcourt.Screens.Screen
+ 	public void actionPerformed(ActionEvent e) {
+        if (Tools.movedAway(this)) {
+            return;
+        }
+        if (e.getSource() == this.lists) {
+            Tools.setRegion(new arRanking(this));
+        }
+        /* Canvas can't trigger ActionEvent
+        if (e.getSource() == getPic(0)) {
+            Tools.setRegion(EnterGame());
+        }
+        */
+        if (e.getSource() != this.credits) {
+            return;
+        }
+        Tools.setRegion(new arNotice(this, GameStrings.creditText));
     }
 
+    /* to manage click on Portrait */
+    public void mouseClicked(MouseEvent e) {
+        if (e.getSource() == getPic(0)) {
+            Tools.setRegion(EnterGame());
+        }
+    }
+
+    public void mousePressed(MouseEvent e) {
+    }
+
+    public void mouseReleased(MouseEvent e) {
+    }
+
+    public void mouseEntered(MouseEvent e) {
+    }
+
+    public void mouseExited(MouseEvent e) {
+    }
+
+    /*
     public boolean handleEvent(Event e) {
         boolean val = this.handleEvent(e);
         if (e.target == this.nameTXF || e.target == this.passTXF) {
@@ -112,7 +156,10 @@ public class arEntry extends Screen implements GameStrings, KeyListener {
         }
         return val;
     }
+    */
 
+
+    /* for login/password */
     public void keyPressed(KeyEvent e) {
         getPic(0).show(testNames());
     }
@@ -126,18 +173,28 @@ public class arEntry extends Screen implements GameStrings, KeyListener {
 
 
     Screen EnterGame() {
+        int a = 0;
+        System.out.println("EnterGame: " + a); a+=1;
         String name = scoreString(this.nameTXF.getText());
         String pass = scoreString(this.passTXF.getText());
+        System.out.println("EnterGame: " + a); a+=1;
         Player player = Tools.getPlayer();
+        System.out.println("EnterGame: " + a); a+=1;
         if (!player.loadHero(name, pass)) {
+            System.out.println("error loadHero EnterGame: " + a); a+=1;
             return player.errorScreen(this);
         }
+        System.out.println("EnterGame: " + a); a+=1;
         if (player.getHero() == null) {
+            System.out.println("error getHero EnterGame: " + a); a+=1;
             return new arCreate(player);
         }
+        System.out.println("EnterGame: " + a); a+=1;
         if (player.isDead()) {
+            System.out.println("Dead EnterGame: " + a); a+=1;
             return new arNotice(this, GameStrings.heroHasDied);
         }
+        System.out.println("EnterGame: " + a); a+=1;
         PlaceTable lot = Tools.getPlaceTable();
         lot.select(player.getPlace());
         Screen next = lot.getLaunch();
@@ -178,6 +235,9 @@ public class arEntry extends Screen implements GameStrings, KeyListener {
         addPic(new Portrait("fldQuest.jpg", "Enter Here", 235, 215, 96, 64));
         getPic(0).setForeground(Color.white);
         getPic(0).show(false);
+        getPic(0).addMouseListener(this);
+
+
         this.nameTXF = new FTextField(15);
         this.nameTXF.setBackground(entryC);
         this.nameTXF.setForeground(Color.black);
@@ -191,10 +251,17 @@ public class arEntry extends Screen implements GameStrings, KeyListener {
         this.passTXF.reshape(100, 260, 120, 22);
         this.passTXF.addKeyListener(this);
 
+        /* for Debug */
+        this.nameTXF.setText("murlock42");
+        this.passTXF.setText("secret");
+        getPic(0).show(true);
+
         this.lists = new Button("Lists");
         this.lists.reshape(340, 232, 55, 20);
+        this.lists.addActionListener(this);
         this.credits = new Button("Credits");
         this.credits.reshape(340, 262, 55, 20);
+        this.credits.addActionListener(this);
     }
 
     @Override // DCourt.Screens.Screen

@@ -13,7 +13,6 @@ public class itArms extends itList implements ArmsTrait {
     private itCount dval;
     private itCount sval;
     static final int MEGATWEAK = 2048;
-    //static final int MEGATWEAK = MEGATWEAK;
     static final int DECAY_FACTOR = 12;
 
     public itArms() {

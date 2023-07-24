@@ -118,11 +118,16 @@ public class Player implements Constants {
         this.sessionID = Tools.nextInt();
         String msg = String.valueOf(String.valueOf(new StringBuffer(String.valueOf(String.valueOf(tname))).append("|").append(tpass).append("|").append(this.sessionID)));
         this.sessionID = alterSessionID(this.sessionID);
+        /* ADD REST API HERE */
+        /*
         if (!readFindValues(Loader.cgiBuffer(Loader.FINDHERO, msg))) {
             return false;
         }
+        */
         this.hero = null;
-        return readHeroValues(Loader.cgiBuffer(Loader.READHERO, this.name));
+        String STATIC_HERO = "{itHero|Static|150|100|100|50|0|300|}";
+        /* ADD REST API HERE */
+        return readHeroValues(new Buffer(STATIC_HERO)); ////Loader.cgiBuffer(Loader.READHERO, this.name));
     }
 
     boolean readHeroValues(Buffer buf) {
@@ -169,6 +174,9 @@ public class Player implements Constants {
 
     public boolean saveHero() {
         this.hero.fix("Date", Tools.getToday());
+        /* 
+         * name|sessionID|...
+         */
         Buffer buf = Loader.cgiBuffer(Loader.SAVEHERO, String.valueOf(String.valueOf(new StringBuffer(String.valueOf(String.valueOf(this.name))).append("|").append(this.sessionID).append("\n").append(this.hero.toString()))));
         if (!buf.isError()) {
             return true;

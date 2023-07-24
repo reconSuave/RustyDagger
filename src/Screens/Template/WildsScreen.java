@@ -9,12 +9,9 @@ import DCourt.Tools.Tools;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Template/WildsScreen.class */
 public abstract class WildsScreen extends Screen {
-    public static final String TOO_TIRED = "TOO_TIRED";
-    // public static final String TOO_TIRED = TOO_TIRED;
-    public static final String NEED_ROPE = "NEED_ROPE";
-    // public static final String NEED_ROPE = NEED_ROPE;
-    public static final String NEED_LIGHT = "NEED_LIGHT";
-    // public static final String NEED_LIGHT = NEED_LIGHT;
+    public static final String TOO_TIRED = "\tYou find yourself far too exhausted to continue adventuring.  Please return tommorow for further exploration.\n";
+    public static final String NEED_ROPE = "\tYou cannot advance any further up these cliffs and crags without an additional supply of ROPE.\n";
+    public static final String NEED_LIGHT = "\tYou can advance no further through these dark and dingy caverns without TORCHES or some other source of light.\n";
 
     public abstract Screen pickQuest(int i);
 
