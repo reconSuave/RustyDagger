@@ -5,26 +5,25 @@ import java.awt.TextArea;
 
 /* loaded from: DCourt.jar:DCourt/Components/FTextArea.class */
 public class FTextArea extends TextArea {
-    int max;
+  int max;
 
-    public FTextArea() {
-    }
+  public FTextArea() {}
 
-    public FTextArea(int len) {
-        this.max = len;
-    }
+  public FTextArea(int len) {
+    this.max = len;
+  }
 
-    void setSize(int len) {
-        this.max = len;
-    }
+  void setSize(int len) {
+    this.max = len;
+  }
 
-    public boolean handleEvent(Event e) {
-        String msg;
-        boolean result = handleEvent(e);
-        if (e.target == this && (msg = getText()) != null && msg.length() > this.max) {
-            setText(msg.substring(0, this.max));
-            select(this.max, this.max);
-        }
-        return result;
+  public boolean handleEvent(Event e) {
+    String msg;
+    boolean result = handleEvent(e);
+    if (e.target == this && (msg = getText()) != null && msg.length() > this.max) {
+      setText(msg.substring(0, this.max));
+      select(this.max, this.max);
     }
+    return result;
+  }
 }
