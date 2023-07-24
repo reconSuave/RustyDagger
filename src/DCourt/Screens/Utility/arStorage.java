@@ -1,11 +1,12 @@
 package DCourt.Screens.Utility;
 
+import java.awt.Color;
+import java.awt.Graphics;
+
 import DCourt.Items.List.itHero;
 import DCourt.Screens.Screen;
 import DCourt.Screens.Template.Transfer;
 import DCourt.Tools.Tools;
-import java.awt.Color;
-import java.awt.Graphics;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Utility/arStorage.class */
 public class arStorage extends Transfer {
@@ -19,7 +20,7 @@ public class arStorage extends Transfer {
 
   @Override // DCourt.Screens.Screen
   public void localPaint(Graphics g) {
-    localPaint(g);
+    super.localPaint(g);
     updateTools();
     g.setFont(Tools.statusF);
     g.setColor(getForeground());

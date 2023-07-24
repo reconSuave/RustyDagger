@@ -1,22 +1,23 @@
 package DCourt.Screens.Template;
 
-import DCourt.Components.FTextList;
-import DCourt.Components.Portrait;
-import DCourt.Control.GearTable;
-import DCourt.Items.Item;
-import DCourt.Items.List.itArms;
-import DCourt.Items.List.itHero;
-import DCourt.Items.Token.itCount;
-import DCourt.Items.itList;
-import DCourt.Screens.Screen;
-import DCourt.Screens.Utility.arDetail;
-import DCourt.Static.Constants;
-import DCourt.Tools.Tools;
 import java.awt.Button;
 import java.awt.Checkbox;
 import java.awt.CheckboxGroup;
 import java.awt.Color;
 import java.awt.Event;
+
+import DCourt.Components.FTextList;
+import DCourt.Components.Portrait;
+import DCourt.Control.GearTable;
+import DCourt.Items.Item;
+import DCourt.Items.itList;
+import DCourt.Items.List.itArms;
+import DCourt.Items.List.itHero;
+import DCourt.Items.Token.itCount;
+import DCourt.Screens.Screen;
+import DCourt.Screens.Utility.arDetail;
+import DCourt.Static.Constants;
+import DCourt.Tools.Tools;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Template/Shop.class */
 public abstract class Shop extends Indoors {
@@ -59,7 +60,7 @@ public abstract class Shop extends Indoors {
 
   @Override // DCourt.Screens.Screen
   public void init() {
-    init();
+    super.init();
     shopList(this.lastSelect);
   }
 
@@ -90,7 +91,7 @@ public abstract class Shop extends Indoors {
     }
     updateTools();
     repaint();
-    return action(e, o);
+    return super.action(e, o);
   }
 
   @Override // DCourt.Screens.Screen

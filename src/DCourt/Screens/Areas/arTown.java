@@ -1,20 +1,21 @@
 package DCourt.Screens.Areas;
 
+import java.awt.Color;
+import java.awt.Event;
+
 import DCourt.Components.Portrait;
 import DCourt.Items.List.itHero;
+import DCourt.Screens.Screen;
 import DCourt.Screens.Areas.Town.arArmour;
 import DCourt.Screens.Areas.Town.arTavern;
 import DCourt.Screens.Areas.Town.arTrader;
 import DCourt.Screens.Areas.Town.arWeapon;
 import DCourt.Screens.Quest.arQuest;
-import DCourt.Screens.Screen;
 import DCourt.Screens.Template.WildsScreen;
 import DCourt.Screens.Utility.arNotice;
 import DCourt.Screens.Wilds.arCastle;
 import DCourt.Screens.Wilds.arField;
 import DCourt.Tools.Tools;
-import java.awt.Color;
-import java.awt.Event;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Areas/arTown.class */
 public class arTown extends Screen {
@@ -32,7 +33,7 @@ public class arTown extends Screen {
 
   @Override // DCourt.Screens.Screen
   public void init() {
-    init();
+    super.init();
     getPic(3).show(Screen.getHero().getLevel() >= 6);
     Screen.getHero().tryToLevel(this);
   }
@@ -57,7 +58,7 @@ public class arTown extends Screen {
       next = new arField();
     }
     Tools.setRegion(next);
-    return action(e, o);
+    return super.action(e, o);
   }
 
   Screen enterCastle() {

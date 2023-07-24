@@ -1,17 +1,18 @@
 package DCourt.Screens.Wilds;
 
+import java.awt.Color;
+import java.awt.Event;
+
 import DCourt.Components.Portrait;
 import DCourt.Items.List.itHero;
+import DCourt.Screens.Screen;
 import DCourt.Screens.Areas.Hills.arGemShop;
 import DCourt.Screens.Areas.Hills.arMagicShop;
 import DCourt.Screens.Quest.arQuest;
-import DCourt.Screens.Screen;
 import DCourt.Screens.Template.WildsScreen;
 import DCourt.Screens.Utility.arNotice;
 import DCourt.Static.Constants;
 import DCourt.Tools.Tools;
-import java.awt.Color;
-import java.awt.Event;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Wilds/arHills.class */
 public class arHills extends WildsScreen {
@@ -55,7 +56,7 @@ public class arHills extends WildsScreen {
 
   @Override // DCourt.Screens.Screen
   public void init() {
-    init();
+    super.init();
     questInit();
   }
 
@@ -84,7 +85,7 @@ public class arHills extends WildsScreen {
         Tools.setRegion(forest());
         break;
     }
-    return action(e, o);
+    return super.action(e, o);
   }
 
   @Override // DCourt.Screens.Template.WildsScreen

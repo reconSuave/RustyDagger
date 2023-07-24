@@ -1,5 +1,9 @@
 package DCourt.Screens.Areas.Town;
 
+import java.awt.Button;
+import java.awt.Event;
+import java.awt.Graphics;
+
 import DCourt.Items.List.itHero;
 import DCourt.Screens.Screen;
 import DCourt.Screens.Template.Indoors;
@@ -9,9 +13,6 @@ import DCourt.Static.Constants;
 import DCourt.Static.GameStrings;
 import DCourt.Static.Rumors;
 import DCourt.Tools.Tools;
-import java.awt.Button;
-import java.awt.Event;
-import java.awt.Graphics;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Areas/Town/arTavern.class */
 public class arTavern extends Indoors implements Rumors {
@@ -66,7 +67,7 @@ public class arTavern extends Indoors implements Rumors {
 
   @Override // DCourt.Screens.Screen
   public void localPaint(Graphics g) {
-    localPaint(g);
+    super.localPaint(g);
     updateTools();
   }
 
@@ -117,7 +118,7 @@ public class arTavern extends Indoors implements Rumors {
     }
     repaint();
     Tools.setRegion(next);
-    return action(e, o);
+    return super.action(e, o);
   }
 
   @Override // DCourt.Screens.Screen

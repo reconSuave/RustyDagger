@@ -1,20 +1,21 @@
 package DCourt.Screens.Command;
 
-import DCourt.Components.FScrollbar;
-import DCourt.Items.Item;
-import DCourt.Items.List.itHero;
-import DCourt.Items.itList;
-import DCourt.Screens.Screen;
-import DCourt.Screens.Utility.arNotice;
-import DCourt.Static.Constants;
-import DCourt.Tools.Buffer;
-import DCourt.Tools.Tools;
 import java.awt.Button;
 import java.awt.Color;
 import java.awt.Event;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.util.Enumeration;
+
+import DCourt.Components.FScrollbar;
+import DCourt.Items.Item;
+import DCourt.Items.itList;
+import DCourt.Items.List.itHero;
+import DCourt.Screens.Screen;
+import DCourt.Screens.Utility.arNotice;
+import DCourt.Static.Constants;
+import DCourt.Tools.Buffer;
+import DCourt.Tools.Tools;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Command/arRanking.class */
 public class arRanking extends Screen {
@@ -182,7 +183,7 @@ public class arRanking extends Screen {
       }
     }
     repaint();
-    return action(e, o);
+    return super.action(e, o);
   }
 
   @Override // DCourt.Screens.Screen

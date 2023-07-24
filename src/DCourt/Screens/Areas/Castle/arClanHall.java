@@ -1,12 +1,19 @@
 package DCourt.Screens.Areas.Castle;
 
+import java.awt.Button;
+import java.awt.Checkbox;
+import java.awt.CheckboxGroup;
+import java.awt.Color;
+import java.awt.Event;
+import java.awt.Graphics;
+
 import DCourt.Components.FTextField;
 import DCourt.Items.Item;
+import DCourt.Items.itList;
 import DCourt.Items.List.itAgent;
 import DCourt.Items.List.itHero;
 import DCourt.Items.List.itNote;
 import DCourt.Items.Token.itValue;
-import DCourt.Items.itList;
 import DCourt.Screens.Screen;
 import DCourt.Screens.Template.Indoors;
 import DCourt.Screens.Utility.arNotice;
@@ -18,12 +25,6 @@ import DCourt.Tools.Buffer;
 import DCourt.Tools.Loader;
 import DCourt.Tools.MadLib;
 import DCourt.Tools.Tools;
-import java.awt.Button;
-import java.awt.Checkbox;
-import java.awt.CheckboxGroup;
-import java.awt.Color;
-import java.awt.Event;
-import java.awt.Graphics;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Areas/Castle/arClanHall.class */
 public class arClanHall extends Indoors implements Constants {
@@ -120,14 +121,14 @@ public class arClanHall extends Indoors implements Constants {
     this.petitionID = -1;
     findNextPetition();
     this.showPetitions = this.heroStatus == 3 || this.petition != null;
-    init();
+    super.init();
   }
 
   @Override // DCourt.Screens.Screen
   public void localPaint(Graphics g) {
     itHero h = Screen.getHero();
     Checkbox act = this.clanAction.getCurrent();
-    localPaint(g);
+    super.localPaint(g);
     g.setFont(Tools.textF);
     g.drawString(
         String.valueOf(
@@ -220,7 +221,7 @@ public class arClanHall extends Indoors implements Constants {
     }
     updateTools();
     repaint();
-    return action(e, o);
+    return super.action(e, o);
   }
 
   @Override // DCourt.Screens.Screen

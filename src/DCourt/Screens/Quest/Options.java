@@ -1,18 +1,19 @@
 package DCourt.Screens.Quest;
 
-import DCourt.Items.Item;
-import DCourt.Items.List.itHero;
-import DCourt.Items.List.itMonster;
-import DCourt.Items.Token.itValue;
-import DCourt.Items.itList;
-import DCourt.Static.GearTypes;
-import DCourt.Tools.Tools;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Event;
 import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
+
+import DCourt.Items.Item;
+import DCourt.Items.itList;
+import DCourt.Items.List.itHero;
+import DCourt.Items.List.itMonster;
+import DCourt.Items.Token.itValue;
+import DCourt.Static.GearTypes;
+import DCourt.Tools.Tools;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Quest/Options.class */
 public class Options extends Canvas {
@@ -130,7 +131,7 @@ public class Options extends Canvas {
   }
 
   public void reshape(int x, int y, int w, int h) {
-    reshape(x, y, w, h);
+    super.reshape(x, y, w, h);
     setdraw();
   }
 
@@ -180,7 +181,7 @@ public class Options extends Canvas {
     if (e.id == 501 && this.select >= 0 && this.select < this.list.getCount()) {
       postEvent(new Event(this, 1001, (Object) null));
     }
-    return handleEvent(e);
+    return super.handleEvent(e);
   }
 
   void append(int what) {

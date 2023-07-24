@@ -1,14 +1,19 @@
 package DCourt.Screens.Areas;
 
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Event;
+import java.awt.Graphics;
+
+import DCourt.Items.itList;
 import DCourt.Items.List.itHero;
 import DCourt.Items.List.itNote;
 import DCourt.Items.Token.itCount;
-import DCourt.Items.itList;
+import DCourt.Screens.Screen;
 import DCourt.Screens.Areas.Queen.arqBoast;
 import DCourt.Screens.Areas.Queen.arqDice;
 import DCourt.Screens.Areas.Queen.arqGame;
 import DCourt.Screens.Areas.Queen.arqMingle;
-import DCourt.Screens.Screen;
 import DCourt.Screens.Template.Indoors;
 import DCourt.Screens.Utility.arNotice;
 import DCourt.Screens.Utility.arPackage;
@@ -16,10 +21,6 @@ import DCourt.Static.Constants;
 import DCourt.Static.GameStrings;
 import DCourt.Tools.MadLib;
 import DCourt.Tools.Tools;
-import java.awt.Button;
-import java.awt.Color;
-import java.awt.Event;
-import java.awt.Graphics;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Areas/arQueen.class */
 public class arQueen extends Indoors {
@@ -129,7 +130,7 @@ public class arQueen extends Indoors {
   public void localPaint(Graphics g) {
     int rank = this.hero.getSocial();
     int sex = this.hero.getGender();
-    localPaint(g);
+    super.localPaint(g);
     if (rank < 9) {
       g.drawString(
           String.valueOf(
@@ -165,7 +166,7 @@ public class arQueen extends Indoors {
     } else if (e.target == getPic(0)) {
       Tools.setRegion(getHome());
     }
-    return action(e, o);
+    return super.action(e, o);
   }
 
   @Override // DCourt.Screens.Screen

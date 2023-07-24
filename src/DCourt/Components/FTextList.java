@@ -34,11 +34,11 @@ public class FTextList extends FTools {
   }
 
   public void reshape(Rectangle r) {
-    reshape(r.x, r.y, r.width, r.height);
+    super.reshape(r.x, r.y, r.width, r.height);
   }
 
   public void reshape(int x, int y, int w, int h) {
-    reshape(x, y, w, h);
+    super.reshape(x, y, w, h);
     this.width = w - 6;
     this.height = h;
     this.scroll.reshape(w - 12, 0, 12, this.height);
@@ -51,7 +51,7 @@ public class FTextList extends FTools {
 
   @Override // DCourt.Components.FTools
   public void setFill(Color fc) {
-    setFill(fc);
+    super.setFill(fc);
     this.scroll.setFill(fc);
   }
 
@@ -89,7 +89,7 @@ public class FTextList extends FTools {
   @Override // DCourt.Components.FTools
   public boolean handleEvent(Event e) {
     if (e.target != this.scroll || this.scroll.getVal() == this.base) {
-      return handleEvent(e);
+      return super.handleEvent(e);
     }
     repaint();
     return true;

@@ -1,5 +1,10 @@
 package DCourt.Screens.Areas.Mound;
 
+import java.awt.Button;
+import java.awt.Checkbox;
+import java.awt.CheckboxGroup;
+import java.awt.Event;
+
 import DCourt.Items.Item;
 import DCourt.Items.List.itArms;
 import DCourt.Screens.Screen;
@@ -10,10 +15,6 @@ import DCourt.Static.GRumors;
 import DCourt.Static.GameStrings;
 import DCourt.Static.GearTypes;
 import DCourt.Tools.Tools;
-import java.awt.Button;
-import java.awt.Checkbox;
-import java.awt.CheckboxGroup;
-import java.awt.Event;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Areas/Mound/arGoblin.class */
 public class arGoblin extends Shop implements GRumors {
@@ -107,7 +108,7 @@ public class arGoblin extends Shop implements GRumors {
 
   @Override // DCourt.Screens.Template.Shop, DCourt.Screens.Screen
   public void createTools() {
-    createTools();
+    super.createTools();
     getTable().reshape(160, 80, 230, 175);
     int i = text.length;
     if (i > cost.length) {
@@ -144,7 +145,7 @@ public class arGoblin extends Shop implements GRumors {
 
   @Override // DCourt.Screens.Template.Shop, DCourt.Screens.Screen
   public void addTools() {
-    addTools();
+    super.addTools();
     for (int i = 0; i < this.tools.length; i++) {
       add(this.tools[i]);
     }
@@ -207,7 +208,7 @@ public class arGoblin extends Shop implements GRumors {
         }
       }
     }
-    return action(e, o);
+    return super.action(e, o);
   }
 
   Screen rumors() {

@@ -1,8 +1,13 @@
 package DCourt.Screens.Utility;
 
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Event;
+import java.awt.Graphics;
+
 import DCourt.Components.FTextField;
-import DCourt.Items.List.itHero;
 import DCourt.Items.itList;
+import DCourt.Items.List.itHero;
 import DCourt.Screens.Screen;
 import DCourt.Screens.Template.Transfer;
 import DCourt.Static.GameStrings;
@@ -10,10 +15,6 @@ import DCourt.Tools.Buffer;
 import DCourt.Tools.Loader;
 import DCourt.Tools.MadLib;
 import DCourt.Tools.Tools;
-import java.awt.Button;
-import java.awt.Color;
-import java.awt.Event;
-import java.awt.Graphics;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Utility/arPackage.class */
 public class arPackage extends Transfer {
@@ -50,7 +51,7 @@ public class arPackage extends Transfer {
 
   @Override // DCourt.Screens.Screen
   public void localPaint(Graphics g) {
-    localPaint(g);
+    super.localPaint(g);
     updateTools();
     g.setFont(Tools.textF);
     g.setColor(getForeground());
@@ -68,12 +69,12 @@ public class arPackage extends Transfer {
     if (e.target == this.send) {
       Tools.setRegion(sendPackage());
     }
-    return action(e, o);
+    return super.action(e, o);
   }
 
   @Override // DCourt.Screens.Template.Transfer, DCourt.Screens.Screen
   public void createTools() {
-    createTools();
+    super.createTools();
     this.send = new Button("Send $0");
     this.send.reshape(275, 272, 80, 20);
     this.send.setFont(Tools.textF);
@@ -84,7 +85,7 @@ public class arPackage extends Transfer {
 
   @Override // DCourt.Screens.Template.Transfer, DCourt.Screens.Screen
   public void addTools() {
-    addTools();
+    super.addTools();
     add(this.send);
     add(this.name);
   }

@@ -1,13 +1,14 @@
 package DCourt.Screens.Template;
 
+import java.awt.Button;
+import java.awt.Event;
+
 import DCourt.Items.Item;
 import DCourt.Items.List.itArms;
 import DCourt.Items.List.itHero;
 import DCourt.Screens.Screen;
 import DCourt.Static.ArmsTrait;
 import DCourt.Tools.Tools;
-import java.awt.Button;
-import java.awt.Event;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Template/Smith.class */
 public abstract class Smith extends Shop {
@@ -22,7 +23,7 @@ public abstract class Smith extends Shop {
 
   @Override // DCourt.Screens.Template.Shop, DCourt.Screens.Screen
   public void init() {
-    init();
+    super.init();
     updateTools();
   }
 
@@ -37,12 +38,12 @@ public abstract class Smith extends Shop {
     if (e.target == this.special) {
       doSpecial();
     }
-    return action(e, o);
+    return super.action(e, o);
   }
 
   @Override // DCourt.Screens.Template.Shop, DCourt.Screens.Screen
   public void createTools() {
-    createTools();
+    super.createTools();
     this.transact = new Button("Buy");
     this.transact.reshape(180, 50, 100, 20);
     this.transact.setFont(Tools.textF);
@@ -50,13 +51,13 @@ public abstract class Smith extends Shop {
 
   @Override // DCourt.Screens.Template.Shop, DCourt.Screens.Screen
   public void addTools() {
-    addTools();
+    super.addTools();
     add(this.transact);
   }
 
   @Override // DCourt.Screens.Template.Shop
   public void updateTools() {
-    updateTools();
+    super.updateTools();
     Item it = shopFind();
     if (isPack()) {
       this.transact.setLabel("Sell $".concat(String.valueOf(String.valueOf(packValue(it)))));

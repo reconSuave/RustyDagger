@@ -19,7 +19,7 @@ public class FTextArea extends TextArea {
 
   public boolean handleEvent(Event e) {
     String msg;
-    boolean result = handleEvent(e);
+    boolean result = super.handleEvent(e);
     if (e.target == this && (msg = getText()) != null && msg.length() > this.max) {
       setText(msg.substring(0, this.max));
       select(this.max, this.max);

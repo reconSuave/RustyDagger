@@ -1,23 +1,24 @@
 package DCourt.Screens.Utility;
 
-import DCourt.Components.FTextList;
-import DCourt.Control.GearTable;
-import DCourt.Items.Item;
-import DCourt.Items.List.itAgent;
-import DCourt.Items.List.itArms;
-import DCourt.Items.List.itHero;
-import DCourt.Items.List.itNote;
-import DCourt.Items.itList;
-import DCourt.Screens.Screen;
-import DCourt.Static.ArmsTrait;
-import DCourt.Static.GearTypes;
-import DCourt.Tools.Tools;
 import java.awt.Button;
 import java.awt.Color;
 import java.awt.Event;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.util.Enumeration;
+
+import DCourt.Components.FTextList;
+import DCourt.Control.GearTable;
+import DCourt.Items.Item;
+import DCourt.Items.itList;
+import DCourt.Items.List.itAgent;
+import DCourt.Items.List.itArms;
+import DCourt.Items.List.itHero;
+import DCourt.Items.List.itNote;
+import DCourt.Screens.Screen;
+import DCourt.Static.ArmsTrait;
+import DCourt.Static.GearTypes;
+import DCourt.Tools.Tools;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Utility/arStatus.class */
 public class arStatus extends Screen implements GearTypes, ArmsTrait {
@@ -69,7 +70,7 @@ public class arStatus extends Screen implements GearTypes, ArmsTrait {
 
   @Override // DCourt.Screens.Screen
   public void init() {
-    init();
+    super.init();
     updateTools();
     fixTable();
   }

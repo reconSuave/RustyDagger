@@ -1,19 +1,20 @@
 package DCourt.Screens.Wilds;
 
+import java.awt.Color;
+import java.awt.Event;
+import java.awt.Graphics;
+
 import DCourt.Components.Portrait;
 import DCourt.Items.List.itHero;
+import DCourt.Screens.Screen;
 import DCourt.Screens.Areas.Mound.arGoblin;
 import DCourt.Screens.Quest.arQuest;
-import DCourt.Screens.Screen;
 import DCourt.Screens.Template.WildsScreen;
 import DCourt.Screens.Utility.arNotice;
 import DCourt.Static.Constants;
 import DCourt.Tools.Buffer;
 import DCourt.Tools.Loader;
 import DCourt.Tools.Tools;
-import java.awt.Color;
-import java.awt.Event;
-import java.awt.Graphics;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Wilds/arMound.class */
 public class arMound extends WildsScreen {
@@ -54,7 +55,7 @@ public class arMound extends WildsScreen {
 
   @Override // DCourt.Screens.Screen
   public void init() {
-    init();
+    super.init();
     questInit();
     getPic(0).show(Screen.packCount("Map to Warrens") > 0);
     getPic(1).show(Screen.packCount("Map to Treasury") > 0);
@@ -64,7 +65,7 @@ public class arMound extends WildsScreen {
 
   @Override // DCourt.Screens.Screen
   public void localPaint(Graphics g) {
-    localPaint(g);
+    super.localPaint(g);
     g.setFont(Tools.courtF);
     g.setColor(new Color(96, 48, 24));
     g.drawString(getTitle(), 10, 20);
@@ -95,7 +96,7 @@ public class arMound extends WildsScreen {
         Tools.setRegion(new arGoblin(this));
         break;
     }
-    return action(e, o);
+    return super.action(e, o);
   }
 
   @Override // DCourt.Screens.Template.WildsScreen

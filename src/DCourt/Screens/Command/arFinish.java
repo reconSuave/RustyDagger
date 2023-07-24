@@ -1,17 +1,18 @@
 package DCourt.Screens.Command;
 
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Event;
+import java.awt.Graphics;
+
 import DCourt.Components.Portrait;
-import DCourt.Items.List.itHero;
 import DCourt.Items.itList;
+import DCourt.Items.List.itHero;
 import DCourt.Screens.Screen;
 import DCourt.Screens.Utility.arNotice;
 import DCourt.Static.Constants;
 import DCourt.Static.GameStrings;
 import DCourt.Tools.Tools;
-import java.awt.Button;
-import java.awt.Color;
-import java.awt.Event;
-import java.awt.Graphics;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Command/arFinish.class */
 public class arFinish extends Screen implements Constants {
@@ -126,7 +127,7 @@ public class arFinish extends Screen implements Constants {
     } else {
       repaint();
     }
-    return action(e, o);
+    return super.action(e, o);
   }
 
   @Override // DCourt.Screens.Screen

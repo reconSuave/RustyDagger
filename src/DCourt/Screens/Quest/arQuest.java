@@ -1,8 +1,13 @@
 package DCourt.Screens.Quest;
 
+import java.awt.Color;
+import java.awt.Event;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
+
+import DCourt.Items.itList;
 import DCourt.Items.List.itHero;
 import DCourt.Items.List.itMonster;
-import DCourt.Items.itList;
 import DCourt.Screens.Screen;
 import DCourt.Screens.Utility.arNotice;
 import DCourt.Screens.Utility.arStatus;
@@ -12,10 +17,6 @@ import DCourt.Static.QuestStrings;
 import DCourt.Tools.Breaker;
 import DCourt.Tools.DrawTools;
 import DCourt.Tools.Tools;
-import java.awt.Color;
-import java.awt.Event;
-import java.awt.FontMetrics;
-import java.awt.Graphics;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Quest/arQuest.class */
 public class arQuest extends Screen implements QuestStrings, GearTypes {
@@ -55,7 +56,7 @@ public class arQuest extends Screen implements QuestStrings, GearTypes {
 
   @Override // DCourt.Screens.Screen
   public void init() {
-    init();
+    super.init();
     if (Screen.getActions().isMatch(Constants.SPELLS)) {
       Tools.setRegion(applyChoice(16));
     }
@@ -67,7 +68,7 @@ public class arQuest extends Screen implements QuestStrings, GearTypes {
     addPic(this.mob.getPicture());
     getPic(0).reshape(10, 10, 160, 160);
     add(this.opt);
-    addTools();
+    super.addTools();
   }
 
   @Override // DCourt.Screens.Screen

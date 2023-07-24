@@ -1,17 +1,18 @@
 package DCourt.Screens.Wilds;
 
+import java.awt.Color;
+import java.awt.Event;
+
 import DCourt.Components.Portrait;
 import DCourt.Items.List.itHero;
-import DCourt.Screens.Areas.Fields.arHealer;
-import DCourt.Screens.Areas.arTown;
-import DCourt.Screens.Quest.arQuest;
 import DCourt.Screens.Screen;
+import DCourt.Screens.Areas.arTown;
+import DCourt.Screens.Areas.Fields.arHealer;
+import DCourt.Screens.Quest.arQuest;
 import DCourt.Screens.Template.WildsScreen;
 import DCourt.Screens.Utility.arNotice;
 import DCourt.Static.Constants;
 import DCourt.Tools.Tools;
-import java.awt.Color;
-import java.awt.Event;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Wilds/arField.class */
 public class arField extends WildsScreen {
@@ -52,7 +53,7 @@ public class arField extends WildsScreen {
 
   @Override // DCourt.Screens.Screen
   public void init() {
-    init();
+    super.init();
     questInit();
     getPic(4).show(Tools.getHero().getLevel() >= 4);
     getPic(5).show(Tools.getHero().getLevel() >= 8);
@@ -83,7 +84,7 @@ public class arField extends WildsScreen {
         Tools.setRegion(enterMound());
         break;
     }
-    return action(e, o);
+    return super.action(e, o);
   }
 
   Screen enterForest() {

@@ -1,15 +1,16 @@
 package DCourt.Screens.Template;
 
+import java.awt.Button;
+import java.awt.Event;
+
 import DCourt.Components.FScrollbar;
 import DCourt.Components.FTextList;
 import DCourt.Items.Item;
+import DCourt.Items.itList;
 import DCourt.Items.Token.itCount;
 import DCourt.Items.Token.itValue;
-import DCourt.Items.itList;
 import DCourt.Screens.Screen;
 import DCourt.Tools.Tools;
-import java.awt.Button;
-import java.awt.Event;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Template/Transfer.class */
 public abstract class Transfer extends Screen {
@@ -67,7 +68,7 @@ public abstract class Transfer extends Screen {
       stashSelect();
     }
     repaint();
-    return action(e, o);
+    return super.action(e, o);
   }
 
   public void goHome() {

@@ -1,14 +1,15 @@
 package DCourt.Screens.Areas.Fields;
 
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Event;
+import java.awt.Graphics;
+
 import DCourt.Components.Portrait;
 import DCourt.Items.List.itHero;
 import DCourt.Screens.Screen;
 import DCourt.Static.Constants;
 import DCourt.Tools.Tools;
-import java.awt.Button;
-import java.awt.Color;
-import java.awt.Event;
-import java.awt.Graphics;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Areas/Fields/arHealer.class */
 public class arHealer extends Screen {
@@ -40,7 +41,7 @@ public class arHealer extends Screen {
 
   @Override // DCourt.Screens.Screen
   public void localPaint(Graphics g) {
-    localPaint(g);
+    super.localPaint(g);
     updateTools();
   }
 
@@ -94,7 +95,7 @@ public class arHealer extends Screen {
       }
     }
     repaint();
-    return action(e, o);
+    return super.action(e, o);
   }
 
   @Override // DCourt.Screens.Screen

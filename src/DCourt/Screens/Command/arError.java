@@ -1,10 +1,11 @@
 package DCourt.Screens.Command;
 
-import DCourt.Screens.Screen;
-import DCourt.Tools.Tools;
 import java.awt.Color;
 import java.awt.Event;
 import java.awt.Graphics;
+
+import DCourt.Screens.Screen;
+import DCourt.Tools.Tools;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Command/arError.class */
 public class arError extends Screen {
@@ -25,7 +26,7 @@ public class arError extends Screen {
   @Override // DCourt.Screens.Screen
   public void localPaint(Graphics g) {
     String msg = this.problem;
-    localPaint(g);
+    super.localPaint(g);
     g.setColor(getForeground());
     g.setFont(getFont());
     int v = 10 + 15;

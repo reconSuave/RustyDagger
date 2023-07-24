@@ -1,5 +1,8 @@
 package DCourt.Screens.Areas.Hills;
 
+import java.awt.Button;
+import java.awt.Graphics;
+
 import DCourt.Control.GearTable;
 import DCourt.Items.itList;
 import DCourt.Screens.Screen;
@@ -7,8 +10,6 @@ import DCourt.Screens.Template.Trade;
 import DCourt.Screens.Utility.arPeer;
 import DCourt.Static.GearTypes;
 import DCourt.Tools.Tools;
-import java.awt.Button;
-import java.awt.Graphics;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Areas/Hills/arGemShop.class */
 public class arGemShop extends Trade implements GearTypes {
@@ -45,7 +46,7 @@ public class arGemShop extends Trade implements GearTypes {
 
   @Override // DCourt.Screens.Template.Trade, DCourt.Screens.Template.Shop, DCourt.Screens.Screen
   public void createTools() {
-    createTools();
+    super.createTools();
     this.peer = new Button("Peer $250");
     this.peer.reshape(10, 242, 90, 20);
     this.peer.setFont(Tools.textF);
@@ -53,7 +54,7 @@ public class arGemShop extends Trade implements GearTypes {
 
   @Override // DCourt.Screens.Template.Trade, DCourt.Screens.Template.Shop, DCourt.Screens.Screen
   public void addTools() {
-    addTools();
+    super.addTools();
     add(this.peer);
   }
 
@@ -84,7 +85,7 @@ public class arGemShop extends Trade implements GearTypes {
 
   @Override // DCourt.Screens.Screen
   public void localPaint(Graphics g) {
-    localPaint(g);
+    super.localPaint(g);
     this.peer.enable(Screen.getHero().getMoney() >= 250);
   }
 }

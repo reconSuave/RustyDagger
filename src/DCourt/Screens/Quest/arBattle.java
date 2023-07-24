@@ -1,21 +1,22 @@
 package DCourt.Screens.Quest;
 
+import java.awt.Color;
+import java.awt.Event;
+import java.awt.Graphics;
+import java.util.Enumeration;
+
 import DCourt.Items.Item;
+import DCourt.Items.itList;
 import DCourt.Items.List.itAgent;
 import DCourt.Items.List.itArms;
 import DCourt.Items.List.itHero;
 import DCourt.Items.List.itMonster;
-import DCourt.Items.itList;
 import DCourt.Screens.Screen;
 import DCourt.Screens.Utility.arNotice;
 import DCourt.Static.ArmsTrait;
 import DCourt.Static.Constants;
 import DCourt.Static.GearTypes;
 import DCourt.Tools.Tools;
-import java.awt.Color;
-import java.awt.Event;
-import java.awt.Graphics;
-import java.util.Enumeration;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Quest/arBattle.class */
 public class arBattle extends Screen implements GearTypes {
@@ -59,7 +60,7 @@ public class arBattle extends Screen implements GearTypes {
 
   @Override // DCourt.Screens.Screen
   public void init() {
-    init();
+    super.init();
     if (this.events.length() > 0) {
       Tools.setRegion(new arNotice(this, this.events));
       this.events = "";

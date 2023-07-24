@@ -1,18 +1,19 @@
 package DCourt.Screens.Wilds;
 
+import java.awt.Color;
+import java.awt.Event;
+
 import DCourt.Components.Portrait;
 import DCourt.Items.List.itMonster;
-import DCourt.Screens.Areas.Castle.arClanHall;
-import DCourt.Screens.Areas.Castle.arPostal;
+import DCourt.Screens.Screen;
 import DCourt.Screens.Areas.arQueen;
 import DCourt.Screens.Areas.arTown;
+import DCourt.Screens.Areas.Castle.arClanHall;
+import DCourt.Screens.Areas.Castle.arPostal;
 import DCourt.Screens.Quest.arQuest;
-import DCourt.Screens.Screen;
 import DCourt.Screens.Template.WildsScreen;
 import DCourt.Screens.Utility.arNotice;
 import DCourt.Tools.Tools;
-import java.awt.Color;
-import java.awt.Event;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Wilds/arCastle.class */
 public class arCastle extends WildsScreen {
@@ -70,7 +71,7 @@ public class arCastle extends WildsScreen {
 
   @Override // DCourt.Screens.Screen
   public void init() {
-    init();
+    super.init();
     getPic(2).show(Screen.getLevel() >= 8);
     getPic(5).show(Screen.getLevel() >= 10);
     Screen.getHero().tryToLevel(this);
@@ -101,7 +102,7 @@ public class arCastle extends WildsScreen {
         goQuesting(2);
         break;
     }
-    return action(e, o);
+    return super.action(e, o);
   }
 
   void goQueen() {

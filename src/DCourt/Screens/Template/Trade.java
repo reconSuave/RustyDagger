@@ -1,11 +1,12 @@
 package DCourt.Screens.Template;
 
+import java.awt.Button;
+import java.awt.Event;
+
 import DCourt.Items.Item;
 import DCourt.Items.List.itArms;
 import DCourt.Screens.Screen;
 import DCourt.Tools.Tools;
-import java.awt.Button;
-import java.awt.Event;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Template/Trade.class */
 public abstract class Trade extends Shop {
@@ -36,12 +37,12 @@ public abstract class Trade extends Shop {
       transact(1000);
     }
     repaint();
-    return action(e, o);
+    return super.action(e, o);
   }
 
   @Override // DCourt.Screens.Template.Shop, DCourt.Screens.Screen
   public void createTools() {
-    createTools();
+    super.createTools();
     this.one = new Button("1");
     this.one.reshape(295, 50, 40, 20);
     this.one.setFont(Tools.textF);
@@ -58,7 +59,7 @@ public abstract class Trade extends Shop {
 
   @Override // DCourt.Screens.Template.Shop, DCourt.Screens.Screen
   public void addTools() {
-    addTools();
+    super.addTools();
     add(this.one);
     add(this.ten);
     add(this.hundred);

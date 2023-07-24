@@ -1,11 +1,16 @@
 package DCourt.Screens.Utility;
 
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Event;
+import java.awt.Graphics;
+
 import DCourt.Components.FTextField;
 import DCourt.Control.GearTable;
 import DCourt.Items.Item;
+import DCourt.Items.itList;
 import DCourt.Items.List.itArms;
 import DCourt.Items.List.itHero;
-import DCourt.Items.itList;
 import DCourt.Screens.Screen;
 import DCourt.Static.ArmsTrait;
 import DCourt.Static.Constants;
@@ -13,10 +18,6 @@ import DCourt.Tools.Buffer;
 import DCourt.Tools.Loader;
 import DCourt.Tools.MadLib;
 import DCourt.Tools.Tools;
-import java.awt.Button;
-import java.awt.Color;
-import java.awt.Event;
-import java.awt.Graphics;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Utility/arPeer.class */
 public class arPeer extends arNotice {
@@ -92,7 +93,7 @@ public class arPeer extends arNotice {
 
   @Override // DCourt.Screens.Screen
   public void init() {
-    init();
+    super.init();
     LoadVision(this.pname);
   }
 
