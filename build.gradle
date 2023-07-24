@@ -7,13 +7,20 @@
  */
 
 // Apply the java plugin to add support for Java
-apply plugin: 'java'
+//apply plugin: 'java'
+
+plugins {
+    id 'java'
+    id "org.sonarqube" version "4.2.1.3168"
+}
 
 // In this section you declare where to find the dependencies of your project
 repositories {
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
 }
+
+// sqp_a82ad202fef33b90e263e3bf09529f61362193cb
 
 sourceSets {
     main {
