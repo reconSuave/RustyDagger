@@ -101,7 +101,7 @@ public class itList extends itToken {
 
     @Override // DCourt.Items.itToken, DCourt.Items.Item
     public boolean isValid() {
-        if (!isValid()) {
+        if (!super.isValid()) {
             return false;
         }
         for (int ix = 0; ix < this.queue.size(); ix++) {
