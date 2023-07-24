@@ -1,13 +1,5 @@
 package DCourt.Screens.Command;
 
-import java.awt.Button;
-import java.awt.Checkbox;
-import java.awt.Color;
-import java.awt.Event;
-import java.awt.FontMetrics;
-import java.awt.Graphics;
-import java.awt.Rectangle;
-
 import DCourt.Components.Portrait;
 import DCourt.Control.Player;
 import DCourt.Items.List.itAgent;
@@ -18,6 +10,13 @@ import DCourt.Screens.Wilds.arField;
 import DCourt.Static.Constants;
 import DCourt.Tools.DrawTools;
 import DCourt.Tools.Tools;
+import java.awt.Button;
+import java.awt.Checkbox;
+import java.awt.Color;
+import java.awt.Event;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
+import java.awt.Rectangle;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Command/arCreate.class */
 public class arCreate extends Screen {

@@ -1,9 +1,5 @@
 package DCourt.Screens.Areas.Town;
 
-import java.awt.Button;
-import java.awt.Event;
-import java.awt.Graphics;
-
 import DCourt.Items.List.itHero;
 import DCourt.Screens.Screen;
 import DCourt.Screens.Template.Indoors;
@@ -13,6 +9,9 @@ import DCourt.Static.Constants;
 import DCourt.Static.GameStrings;
 import DCourt.Static.Rumors;
 import DCourt.Tools.Tools;
+import java.awt.Button;
+import java.awt.Event;
+import java.awt.Graphics;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Areas/Town/arTavern.class */
 public class arTavern extends Indoors implements Rumors {

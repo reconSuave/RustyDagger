@@ -1,5 +1,13 @@
 package DCourt.Screens.Command;
 
+import DCourt.Components.FTextField;
+import DCourt.Items.List.itHero;
+import DCourt.Items.Token.itValue;
+import DCourt.Items.itList;
+import DCourt.Screens.Screen;
+import DCourt.Static.Constants;
+import DCourt.Static.GameStrings;
+import DCourt.Tools.Tools;
 import java.awt.Button;
 import java.awt.Checkbox;
 import java.awt.CheckboxGroup;
@@ -7,15 +15,6 @@ import java.awt.Color;
 import java.awt.Event;
 import java.awt.Graphics;
 import java.awt.Rectangle;
-
-import DCourt.Components.FTextField;
-import DCourt.Items.itList;
-import DCourt.Items.List.itHero;
-import DCourt.Items.Token.itValue;
-import DCourt.Screens.Screen;
-import DCourt.Static.Constants;
-import DCourt.Static.GameStrings;
-import DCourt.Tools.Tools;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Command/arBuild.class */
 public class arBuild extends Screen implements GameStrings {

@@ -1,16 +1,10 @@
 package DCourt.Screens.Areas.Castle;
 
-import java.awt.Button;
-import java.awt.Color;
-import java.awt.Event;
-import java.awt.Graphics;
-import java.util.Enumeration;
-
 import DCourt.Components.FTextList;
 import DCourt.Items.Item;
-import DCourt.Items.itList;
 import DCourt.Items.List.itAgent;
 import DCourt.Items.List.itHero;
+import DCourt.Items.itList;
 import DCourt.Screens.Screen;
 import DCourt.Screens.Template.Indoors;
 import DCourt.Screens.Utility.arNotice;
@@ -18,6 +12,11 @@ import DCourt.Screens.Utility.arPackage;
 import DCourt.Tools.Buffer;
 import DCourt.Tools.Loader;
 import DCourt.Tools.Tools;
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Event;
+import java.awt.Graphics;
+import java.util.Enumeration;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Areas/Castle/arPostal.class */
 public class arPostal extends Indoors {

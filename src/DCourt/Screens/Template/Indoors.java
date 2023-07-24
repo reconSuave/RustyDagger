@@ -1,11 +1,10 @@
 package DCourt.Screens.Template;
 
-import java.awt.Color;
-import java.awt.Event;
-
 import DCourt.Components.Portrait;
 import DCourt.Screens.Screen;
 import DCourt.Tools.Tools;
+import java.awt.Color;
+import java.awt.Event;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Template/Indoors.class */
 public abstract class Indoors extends Screen {

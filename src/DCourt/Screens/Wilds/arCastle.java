@@ -1,19 +1,18 @@
 package DCourt.Screens.Wilds;
 
-import java.awt.Color;
-import java.awt.Event;
-
 import DCourt.Components.Portrait;
 import DCourt.Items.List.itMonster;
-import DCourt.Screens.Screen;
-import DCourt.Screens.Areas.arQueen;
-import DCourt.Screens.Areas.arTown;
 import DCourt.Screens.Areas.Castle.arClanHall;
 import DCourt.Screens.Areas.Castle.arPostal;
+import DCourt.Screens.Areas.arQueen;
+import DCourt.Screens.Areas.arTown;
 import DCourt.Screens.Quest.arQuest;
+import DCourt.Screens.Screen;
 import DCourt.Screens.Template.WildsScreen;
 import DCourt.Screens.Utility.arNotice;
 import DCourt.Tools.Tools;
+import java.awt.Color;
+import java.awt.Event;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Wilds/arCastle.class */
 public class arCastle extends WildsScreen {

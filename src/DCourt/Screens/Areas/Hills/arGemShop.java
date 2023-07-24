@@ -1,8 +1,5 @@
 package DCourt.Screens.Areas.Hills;
 
-import java.awt.Button;
-import java.awt.Graphics;
-
 import DCourt.Control.GearTable;
 import DCourt.Items.itList;
 import DCourt.Screens.Screen;
@@ -10,6 +7,8 @@ import DCourt.Screens.Template.Trade;
 import DCourt.Screens.Utility.arPeer;
 import DCourt.Static.GearTypes;
 import DCourt.Tools.Tools;
+import java.awt.Button;
+import java.awt.Graphics;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Areas/Hills/arGemShop.class */
 public class arGemShop extends Trade implements GearTypes {

@@ -1,10 +1,5 @@
 package DCourt.Screens.Areas.Mound;
 
-import java.awt.Button;
-import java.awt.Checkbox;
-import java.awt.CheckboxGroup;
-import java.awt.Event;
-
 import DCourt.Items.Item;
 import DCourt.Items.List.itArms;
 import DCourt.Screens.Screen;
@@ -15,6 +10,10 @@ import DCourt.Static.GRumors;
 import DCourt.Static.GameStrings;
 import DCourt.Static.GearTypes;
 import DCourt.Tools.Tools;
+import java.awt.Button;
+import java.awt.Checkbox;
+import java.awt.CheckboxGroup;
+import java.awt.Event;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Areas/Mound/arGoblin.class */
 public class arGoblin extends Shop implements GRumors {

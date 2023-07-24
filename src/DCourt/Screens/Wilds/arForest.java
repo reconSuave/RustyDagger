@@ -1,18 +1,17 @@
 package DCourt.Screens.Wilds;
 
-import java.awt.Color;
-import java.awt.Event;
-
 import DCourt.Components.Portrait;
 import DCourt.Items.List.itHero;
-import DCourt.Screens.Screen;
 import DCourt.Screens.Areas.Forest.arDwfSmith;
 import DCourt.Screens.Areas.Forest.arGuild;
 import DCourt.Screens.Quest.arQuest;
+import DCourt.Screens.Screen;
 import DCourt.Screens.Template.WildsScreen;
 import DCourt.Screens.Utility.arNotice;
 import DCourt.Static.Constants;
 import DCourt.Tools.Tools;
+import java.awt.Color;
+import java.awt.Event;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Wilds/arForest.class */
 public class arForest extends WildsScreen {

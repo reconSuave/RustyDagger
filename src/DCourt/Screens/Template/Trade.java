@@ -1,12 +1,11 @@
 package DCourt.Screens.Template;
 
-import java.awt.Button;
-import java.awt.Event;
-
 import DCourt.Items.Item;
 import DCourt.Items.List.itArms;
 import DCourt.Screens.Screen;
 import DCourt.Tools.Tools;
+import java.awt.Button;
+import java.awt.Event;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Template/Trade.class */
 public abstract class Trade extends Shop {

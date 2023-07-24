@@ -1,13 +1,12 @@
 package DCourt.Screens.Utility;
 
-import java.awt.Button;
-import java.awt.Color;
-import java.awt.Event;
-
 import DCourt.Components.FTextArea;
 import DCourt.Items.List.itNote;
 import DCourt.Screens.Screen;
 import DCourt.Tools.Tools;
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Event;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Utility/arScribe.class */
 public class arScribe extends Screen {

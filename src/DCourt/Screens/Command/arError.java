@@ -1,11 +1,10 @@
 package DCourt.Screens.Command;
 
+import DCourt.Screens.Screen;
+import DCourt.Tools.Tools;
 import java.awt.Color;
 import java.awt.Event;
 import java.awt.Graphics;
-
-import DCourt.Screens.Screen;
-import DCourt.Tools.Tools;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Command/arError.class */
 public class arError extends Screen {

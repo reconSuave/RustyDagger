@@ -1,19 +1,18 @@
 package DCourt.Screens.Quest;
 
+import DCourt.Items.Item;
+import DCourt.Items.List.itHero;
+import DCourt.Items.List.itMonster;
+import DCourt.Items.Token.itValue;
+import DCourt.Items.itList;
+import DCourt.Static.GearTypes;
+import DCourt.Tools.Tools;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Event;
 import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
-
-import DCourt.Items.Item;
-import DCourt.Items.itList;
-import DCourt.Items.List.itHero;
-import DCourt.Items.List.itMonster;
-import DCourt.Items.Token.itValue;
-import DCourt.Static.GearTypes;
-import DCourt.Tools.Tools;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Quest/Options.class */
 public class Options extends Canvas {

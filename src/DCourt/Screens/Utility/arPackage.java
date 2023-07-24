@@ -1,13 +1,8 @@
 package DCourt.Screens.Utility;
 
-import java.awt.Button;
-import java.awt.Color;
-import java.awt.Event;
-import java.awt.Graphics;
-
 import DCourt.Components.FTextField;
-import DCourt.Items.itList;
 import DCourt.Items.List.itHero;
+import DCourt.Items.itList;
 import DCourt.Screens.Screen;
 import DCourt.Screens.Template.Transfer;
 import DCourt.Static.GameStrings;
@@ -15,6 +10,10 @@ import DCourt.Tools.Buffer;
 import DCourt.Tools.Loader;
 import DCourt.Tools.MadLib;
 import DCourt.Tools.Tools;
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Event;
+import java.awt.Graphics;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Utility/arPackage.class */
 public class arPackage extends Transfer {
