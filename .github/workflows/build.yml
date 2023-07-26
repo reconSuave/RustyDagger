@@ -1,0 +1,15 @@
+name: learn-github-actions
+run-name: Buid JAR
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: oracle-actions/setup-java@v1
+        with:
+          website: jdk.java.net
+          release: 11
+      - run: gradle spotlessCheck
+      - run: gradle jar
+
