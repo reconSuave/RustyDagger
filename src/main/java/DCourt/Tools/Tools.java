@@ -86,15 +86,15 @@ public class Tools {
   }
 
   public static void prepareFonts() {
-    courtF = new Font(primeFont, 3, 18);
-    questF = new Font(primeFont, 2, 18);
+    courtF = new Font(primeFont, Font.ITALIC + Font.BOLD, 14);
+    questF = new Font(primeFont, Font.ITALIC, 14);
     statusF = new Font(primeFont, 0, 18);
-    fieldF = new Font(primeFont, 3, 16);
+    fieldF = new Font(primeFont, Font.ITALIC + Font.BOLD, 16);
     fightF = new Font(primeFont, 0, 16);
-    boldF = new Font(primeFont, 1, 14);
+    boldF = new Font(primeFont, Font.BOLD, 14);
     textF = new Font(primeFont, 0, 14);
-    bigF = new Font(primeFont, 1, 36);
-    giantF = new Font(primeFont, 1, 75);
+    bigF = new Font(primeFont, Font.BOLD, 36);
+    giantF = new Font(primeFont, Font.BOLD, 75);
   }
 
   public static int getJvmVersion() {

@@ -153,7 +153,7 @@ public class Options extends Canvas {
   void setdraw() {
     int count = this.list.getCount();
     int height = bounds().height;
-    for (int size = 18; size >= 8; size--) {
+    for (int size = 16; size >= 8; size--) {
       this.font = new Font(Tools.primeFont, 3, size);
       FontMetrics fmet = getFontMetrics(this.font);
       this.fontA = fmet.getAscent();
