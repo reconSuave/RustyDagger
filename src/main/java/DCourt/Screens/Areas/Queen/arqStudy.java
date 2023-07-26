@@ -5,7 +5,8 @@ import DCourt.Screens.Utility.arNotice;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Areas/Queen/arqStudy.class */
 public class arqStudy extends arNotice {
-  static final String studyMsg = "$TB$You engage in a philosophical dispute with $lordname$ upon $topic$.$CR$";
+  static final String studyMsg =
+      "$TB$You engage in a philosophical dispute with $lordname$ upon $topic$.$CR$";
   static final String[] boastText = {
     "0",
     "1",
