@@ -4,7 +4,6 @@ import DCourt.Items.Item;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
@@ -34,6 +33,9 @@ public class Loader {
   }
 
   public static String cgi(String action, String data) {
+    System.out.println(action + " : " + data);
+    return "";
+    /*
     try {
       return operate(
               new URL(
@@ -55,6 +57,7 @@ public class Loader {
               String.valueOf(new StringBuffer("Loader Exception: [").append(ex).append("]"))));
       return "";
     }
+    */
   }
 
   public String getText() {

@@ -132,7 +132,12 @@ public class Player implements Constants {
     }
     */
     this.hero = null;
-    String STATIC_HERO = "{itHero|Static|150|100|100|50|0|300|{~|values|{=|place|fields}}}";
+    String STATIC_HERO =
+        "{itHero|Static|150|100|100|50|0|300|"
+            + "{~|values|{=|place|fields}}|"
+            + "{~|pack|{#|Marks|100}}|"
+            + "{~|gear|{itArms|Hatchet|4|0|-1|right}}|"
+            + "}";
     /* ADD REST API HERE */
     return readHeroValues(
         new Buffer(STATIC_HERO)); // //Loader.cgiBuffer(Loader.READHERO, this.name));

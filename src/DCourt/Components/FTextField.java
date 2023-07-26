@@ -37,7 +37,7 @@ public class FTextField extends TextField {
 
   public boolean postEvent(Event e) {
     String msg;
-    boolean result = postEvent(e);
+    boolean result = super.postEvent(e);
     if (e.target == this && (msg = getText()) != null && msg.length() > this.max) {
       setText(msg.substring(0, this.max));
     }

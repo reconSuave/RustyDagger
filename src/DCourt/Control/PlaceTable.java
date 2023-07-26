@@ -50,6 +50,7 @@ public class PlaceTable {
       return null;
     }
     try {
+      System.out.println("Launch " + this.pick.getLaunch() + " screen");
       return (Screen)
           Class.forName(
                   "DCourt.Screens.".concat(String.valueOf(String.valueOf(this.pick.getLaunch()))))

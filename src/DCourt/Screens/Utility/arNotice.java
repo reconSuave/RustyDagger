@@ -39,6 +39,7 @@ public class arNotice extends Screen {
   public void drawText(Graphics g, int dx, int dy) {
     if (this.text != null) {
       g.setFont(Tools.courtF);
+      System.out.println(Tools.courtF + " " + this.text);
       Breaker snap = new Breaker(this.text, g.getFontMetrics(g.getFont()), 380, false);
       for (int ix = 0; ix < snap.lineCount(); ix++) {
         g.drawString(snap.getLine(ix), dx, dy + snap.getAscent() + (ix * snap.getHeight()));
