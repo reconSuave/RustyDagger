@@ -108,6 +108,7 @@ public class arTavern extends Indoors implements Rumors {
               next = new arStorage(this);
               break;
           }
+          break;
         } else {
           i++;
         }
