@@ -41,6 +41,7 @@ public abstract class Screen extends Panel implements GameStrings, ArmsTrait {
   }
 
   public Screen(Screen from, String name) {
+    System.out.println("Screen: " + name);
     setLayout(new StaticLayout());
     this.home = from;
     this.status = true;

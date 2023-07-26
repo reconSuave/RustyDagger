@@ -11,8 +11,7 @@ import DCourt.Tools.Tools;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Areas/Town/arArmour.class */
 public class arArmour extends Smith {
-  static final int MAXFIX_POWER = 0; // MAXFIX_POWER;
-  // static final int MAXFIX_POWER = MAXFIX_POWER;
+  static final int MAXFIX_POWER = 60;
   static String[] greeting = {
     null,
     "What's your sign?",

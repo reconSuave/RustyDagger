@@ -12,8 +12,7 @@ import DCourt.Tools.Tools;
 /* loaded from: DCourt.jar:DCourt/Screens/Areas/Queen/arqMingle.class */
 public class arqMingle extends arNotice {
   static int MINGLERISK = 5;
-  public static final String mingleMsg = "mingleMsg";
-  // public static final String mingleMsg = mingleMsg;
+  public static final String mingleMsg = "$TB$You engange $lordname$ in conversation. $interests$$CR$";
   public static final String[] mingleText = {
     "$TB$Five minutes pass while you describe your bladder problems to $lordname$.  $HE$ smiles in a strained fashion and takes $his$ leave as soon as possible.$CR$$TB$Perhaps you could have been a little more attentive.$CR$",
     "$TB$The $lordrank$ is a terrific conversationalist. $HE$ smiles and nods for several minutes while you speak at some length about your adventures and aspirations.$CR$$TB$You part company thinking that you have made great success with ... uh ... what was $his$ name again? $CR$",

@@ -381,6 +381,5 @@ public class Tools {
       j = 0;
     }
     primeFont = list[j];
-    System.out.println("Selected font " + primeFont);
   }
 }

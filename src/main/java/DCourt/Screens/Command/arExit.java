@@ -13,7 +13,7 @@ public class arExit extends arNotice {
       "$TB$Whoops! you have been killed!!!$CR$$TB$The creature steals half your gear...$CR$$CR$You fall to the ground in the $place$. You will lie there unmourned until tomorrow when the spirits of the $place$ will awaken you.$CR$$CR$$TB$$TB$Please Return Tomorrow$CR$$TB$$TB$For Further Adventures$CR$";
 
   public arExit(Screen from, String loc) {
-    super(from);
+    super(from, "arExit");
     Screen.setPlace(loc);
     if (Screen.getPlayer().isDead()) {
       setMessage(dead());

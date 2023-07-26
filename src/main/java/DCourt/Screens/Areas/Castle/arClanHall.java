@@ -89,11 +89,11 @@ public class arClanHall extends Indoors implements Constants {
       "\tYou compose an elegant message accepting $name$'s petition.  The hero will recieve your message upon the morrow, and should merge with the $clan$ Clan soon after.";
   static final String reinstateMsg =
       "$TB$Servile Krymp pales with horror!$CR$$TB$\"Your Lordship,\" he whimpers, \"There has been a terrible mistake.\"  He cowers before you and cringes from your every move. \"We will rectify this error instantly.  Please don't tell $ruler$.$CR$$CR$$TB$$leader$ has been reinstated as leader of Clan $clan$.";
-  static final String joinStr = "joinStr";
-  static final String quitStr = "quitStr";
-  static final String createStr = "createStr";
-  static final String disbandStr = "disbandStr";
-  static final String affirmStr = "affirmStr";
+  static final String joinStr = "{1}Petition To Join $1000";
+  static final String quitStr = "{5}Quit My Clan $5000";
+  static final String createStr = "{75}Create A Clan $250k";
+  static final String disbandStr = "{15}Destroy My Clan $50000";
+  static final String affirmStr = "Make It So -";
 
   public arClanHall(Screen from) {
     super(from, "Servile Krymps Clan Gathering");

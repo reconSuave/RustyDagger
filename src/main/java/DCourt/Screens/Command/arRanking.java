@@ -59,7 +59,7 @@ public class arRanking extends Screen {
   };
 
   public arRanking(Screen from) {
-    super(from);
+    super(from, "arRankig");
     setBackground(Color.green);
     setForeground(Color.black);
     setFont(Tools.statusF);

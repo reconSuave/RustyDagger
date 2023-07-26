@@ -9,8 +9,7 @@ import DCourt.Tools.Tools;
 
 /* loaded from: DCourt.jar:DCourt/Screens/Areas/Queen/arqGame.class */
 public class arqGame extends arNotice {
-  static final String gameMsg = "gameMsg";
-  // static final String gameMsg = gameMsg;
+  static final String gameMsg = "$TB$Your friends tell you about the latest craze from $country$.  It\'s called $game$$CR$";
   static final String[] game = {
     "Wickets.  You whack a wooden ball with a mallet and try to knock down a standing stick called a wicket while a team of nine men try to stop you.",
     "Nine Pins. You set up ten pegs in a triangle formation. then take turns throwing a ball to bowl them down.",
@@ -46,9 +45,7 @@ public class arqGame extends arNotice {
     "$TB$You charge about with verve and force.  You score several times, impressing the crowds.$CR$$TB$When the scores are tallied, you are found to be ahead of everyone.  Your mates congratulate and express their admiration.$CR$",
     "$TB$You play with an unmatched skill that devestates the opposition. You stop all their points, and score with complete impunity.$CR$$TB$At the end of play, the crowds charge forward and bear you on their shoulders while loudly chanting your name.$CR$"
   };
-  public static final String SMASHED = "SMASHED";
-
-  // public static final String SMASHED = SMASHED;
+  public static final String SMASHED = "\tYou are wounded mortally and fall to the ground. Your friends crowd around looking worried and confused. Finally, someone sends for the healers.  You are carried to the monastery where your life is refreshed.\n";
 
   public arqGame(Screen from) {
     super(from, prepareText());

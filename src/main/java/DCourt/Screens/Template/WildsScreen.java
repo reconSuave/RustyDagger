@@ -25,7 +25,7 @@ public abstract class WildsScreen extends Screen {
   public WildsScreen() {}
 
   public WildsScreen(Screen from) {
-    super(from);
+    super(from, "WildsScreen");
   }
 
   public WildsScreen(String name) {

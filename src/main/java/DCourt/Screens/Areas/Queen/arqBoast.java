@@ -13,8 +13,7 @@ import DCourt.Tools.Tools;
 /* loaded from: DCourt.jar:DCourt/Screens/Areas/Queen/arqBoast.class */
 public class arqBoast extends arNotice {
   static int BOASTRISK = 10;
-  public static final String boastMsg = "boastMsg";
-  // public static final String boastMsg = boastMsg;
+  public static final String boastMsg = "$TB$You corner $lordname$ and start spilling your tales of adventure throughout the realm. You dramatize this narrative by leaping onto tables and swinging candelabras as makeshift weaponry.$CR$";
   public static final String[] boastText = {
     "$TB$Your narrative is going well, when quite by accident you $accident$$CR$$TB$You apologize profusely, but the guardsmen grab you by the collar, take half your purse for damages and eject you from the premises.$CR$",
     "$TB$$lordname$'s frown grows deeper and deeper as you blather continuously about the inummerable goblins, rodents, and boars you have slain in your day.$CR$$TB$Finally, $HE$ interrupts you, declares you a bore and a liar and stomps away indignantly for having wasted $his$ time.$CR$",
@@ -35,7 +34,7 @@ public class arqBoast extends arNotice {
   };
 
   public arqBoast(Screen from) {
-    super(from);
+    super(from, "arqBoast");
     prepareText(from);
   }
 
