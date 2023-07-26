@@ -86,6 +86,7 @@ public class arHealer extends Screen {
               h.getTemp().clrTrait("Panic");
               break;
           }
+          break;
         } else {
           i++;
         }

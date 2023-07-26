@@ -1,8 +1,8 @@
-name: learn-github-actions
+name: Dragon Court
 run-name: Buid JAR
 on: [push]
 jobs:
-  check-bats-version:
+  lint-and-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -14,4 +14,3 @@ jobs:
         uses: gradle/gradle-build-action@v2
       - run: gradle spotlessCheck
       - run: gradle jar
-
