@@ -10,7 +10,7 @@ public class Breaker {
   boolean indent;
   FontMetrics fm;
   String[] lines = new String[0];
-  static final String TAB = "\t";
+  static final String TAB = "  ";
 
   public Breaker(String msg, FontMetrics fm, int wide, boolean indent) {
     this.buf = new Buffer(msg);
@@ -56,13 +56,8 @@ public class Breaker {
           } else if (c != '\r') {
             pixels = c == '\t' ? pixels + this.tabWidth : pixels + this.fm.charWidth(c);
             if (pixels > this.wide) {
-              if (markPixels > (pixels * 4) / 5) {
-                this.buf.goMark();
-                end = this.buf.index();
-              } else {
-                this.buf.advance(-1);
-                end = this.buf.index();
-              }
+              this.buf.goMark();
+              break;
             } else if (c <= ' ') {
               this.buf.setMark();
               markPixels = pixels;
