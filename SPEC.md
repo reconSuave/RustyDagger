@@ -24,14 +24,15 @@ Each entity is described with a custom format:
 | itNote    |           |
 | itToken   |           |
 
-| List of attributes |
-|--------------------|
-| Guts |
-| Wits |
-| Charm |
-| baseA |
-| baseD |
-| baseS |
+| List of attributes | |
+|--------------------|-|
+| Guts | |
+| Wits | |
+| Charm | |
+| baseA | only for itMonter |
+| baseD | only for itMonter |
+| baseS | only for itMonter |
+
 
 
 | Named list | used by | mandatory key | comment |
