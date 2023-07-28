@@ -10,8 +10,8 @@ import DCourt.Screens.Screen;
 import DCourt.Screens.Utility.arNotice;
 import DCourt.Static.Constants;
 import DCourt.Tools.Buffer;
-import DCourt.Tools.Loader;
 import DCourt.Tools.FileLoader;
+import DCourt.Tools.Loader;
 import DCourt.Tools.Tools;
 
 /* loaded from: DCourt.jar:DCourt/Control/Player.class */
@@ -127,12 +127,10 @@ public class Player implements Constants {
                     .append(this.sessionID)));
     this.sessionID = alterSessionID(this.sessionID);
     if (!readFindValues(FileLoader.cgiBuffer(Loader.FINDHERO, msg))) {
-        return false;
+      return false;
     }
     this.hero = null;
-    return readHeroValues(
-        FileLoader.cgiBuffer(Loader.READHERO, this.name)
-    );
+    return readHeroValues(FileLoader.cgiBuffer(Loader.READHERO, this.name));
   }
 
   boolean readHeroValues(Buffer buf) {
@@ -186,9 +184,7 @@ public class Player implements Constants {
     /*
      * name|sessionID|...
      */
-    Buffer buf =
-        FileLoader.cgiBuffer(
-            Loader.SAVEHERO, this.hero.toString());
+    Buffer buf = FileLoader.cgiBuffer(Loader.SAVEHERO, this.hero.toString());
     System.out.println("SAVEHERO " + buf);
     System.out.println(this.hero.toString());
     if (!buf.isError()) {
