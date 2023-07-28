@@ -68,6 +68,7 @@ public class itHero extends itAgent {
     if ((!buf.match("itHero") && !buf.match("itAgent")) || !buf.split()) {
       return null;
     }
+    System.out.println("itHero.factory");
     itHero who = new itHero(buf.token());
     who.loadAttributes(buf);
     who.loadBody(buf);
