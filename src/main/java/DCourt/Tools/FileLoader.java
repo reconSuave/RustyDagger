@@ -5,6 +5,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+
 
 /* loaded from: DCourt.jar:DCourt/Tools/Loader.class */
 public class FileLoader extends Loader {
@@ -18,10 +23,15 @@ public class FileLoader extends Loader {
     return Item.factory(cgi(action, data));
   }
 
+  private static String getToday() {
+    LocalDate d = LocalDate.now();
+    return d.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+  }
+
   public static String cgi(String action, String data) {
     switch (action) {
       case FINDHERO:
-        return "2023-07-27|0||";
+        return getToday() + "|0||";
       case SAVEHERO:
         try {
           FileOutputStream output = new FileOutputStream(HEROFILE);
