@@ -117,20 +117,13 @@ public class Player implements Constants {
     this.name = tname;
     this.pass = tpass;
     this.sessionID = Tools.nextInt();
-    String msg =
-        String.valueOf(
-            String.valueOf(
-                new StringBuffer(String.valueOf(String.valueOf(tname)))
-                    .append("|")
-                    .append(tpass)
-                    .append("|")
-                    .append(this.sessionID)));
+    String msg = tname + "|" + tpass + "|" + this.sessionID;
     this.sessionID = alterSessionID(this.sessionID);
     if (!readFindValues(FileLoader.cgiBuffer(Loader.FINDHERO, msg))) {
       return false;
     }
     this.hero = null;
-    return readHeroValues(FileLoader.cgiBuffer(Loader.READHERO, this.name));
+    return readHeroValues(FileLoader.loadHero(this.name));
   }
 
   boolean readHeroValues(Buffer buf) {
@@ -184,9 +177,8 @@ public class Player implements Constants {
     /*
      * name|sessionID|...
      */
-    Buffer buf = FileLoader.cgiBuffer(Loader.SAVEHERO, this.hero.toString());
-    System.out.println("SAVEHERO " + buf);
-    System.out.println(this.hero.toString());
+    Buffer buf = FileLoader.saveHero(this.name, this.hero.toString());
+    System.out.println("saveHero " + buf);
     if (!buf.isError()) {
       return true;
     }

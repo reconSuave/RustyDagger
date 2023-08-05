@@ -282,11 +282,6 @@ public class arEntry extends Screen
     this.passTXF.reshape(100, 260, 120, 22);
     this.passTXF.addKeyListener(this);
 
-    /* for Debug */
-    this.nameTXF.setText("murlock42");
-    this.passTXF.setText("secret");
-    getPic(0).show(true);
-
     this.lists = new Button("Lists");
     this.lists.reshape(340, 232, 55, 20);
     this.lists.addActionListener(this);
@@ -304,7 +299,10 @@ public class arEntry extends Screen
   }
 
   public boolean testNames() {
-    return this.nameTXF.getText().length() >= 4 && this.passTXF.getText().length() >= 4;
+    return this.nameTXF.getText().length() >= 4;
+    /* no password with local storage
+    && this.passTXF.getText().length() >= 4;
+    */
   }
 
   public String scoreString(String msg) {
