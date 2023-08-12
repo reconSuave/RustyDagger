@@ -10,6 +10,7 @@ import DCourt.Screens.Screen;
 import DCourt.Screens.Utility.arNotice;
 import DCourt.Static.Constants;
 import DCourt.Tools.Buffer;
+import DCourt.Tools.FileLoader;
 import DCourt.Tools.Loader;
 import DCourt.Tools.Tools;
 
@@ -109,52 +110,38 @@ public class Player implements Constants {
     this.start.add(Constants.LEVEL, this.hero.getLevel());
     this.start.add(Constants.EXP, this.hero.getExp());
     this.start.add(Constants.FAME, this.hero.getFame());
-    this.start.add("Marks", this.hero.getMoney());
+    this.start.add(Constants.MONEY, this.hero.getMoney());
   }
 
   public boolean loadHero(String tname, String tpass) {
     this.name = tname;
     this.pass = tpass;
     this.sessionID = Tools.nextInt();
-    String msg =
-        String.valueOf(
-            String.valueOf(
-                new StringBuffer(String.valueOf(String.valueOf(tname)))
-                    .append("|")
-                    .append(tpass)
-                    .append("|")
-                    .append(this.sessionID)));
+    String msg = tname + "|" + tpass + "|" + this.sessionID;
     this.sessionID = alterSessionID(this.sessionID);
-    /* ADD REST API HERE */
-    /*
-    if (!readFindValues(Loader.cgiBuffer(Loader.FINDHERO, msg))) {
-        return false;
+    if (!readFindValues(FileLoader.cgiBuffer(Loader.FINDHERO, msg))) {
+      return false;
     }
-    */
     this.hero = null;
-    String STATIC_HERO =
-        "{itHero|Static|150|100|100|50|0|300|"
-            + "{~|values|{=|place|fields}}|"
-            + "{~|pack|{#|Marks|100}}|"
-            + "{~|gear|{itArms|Hatchet|4|0|-1|right}}|"
-            + "}";
-    /* ADD REST API HERE */
-    return readHeroValues(
-        new Buffer(STATIC_HERO)); // //Loader.cgiBuffer(Loader.READHERO, this.name));
+    return readHeroValues(FileLoader.loadHero(this.name));
   }
 
   boolean readHeroValues(Buffer buf) {
+    System.out.println("== readHeroValues == 1/");
     err = 1;
     if (buf == null || buf.isError()) {
       return false;
     }
     err = 0;
+    System.out.println("== readHeroValues == 2/ > " + buf.toString());
     this.hero = (itHero) Item.factory(buf);
     if (this.hero == null) {
       return true;
     }
+    System.out.println("== readHeroValues == 3/");
     this.hero.update(this.name, this.powers);
     startValues();
+    System.out.println("== readHeroValues == 4/");
     return true;
   }
 
@@ -190,16 +177,8 @@ public class Player implements Constants {
     /*
      * name|sessionID|...
      */
-    Buffer buf =
-        Loader.cgiBuffer(
-            Loader.SAVEHERO,
-            String.valueOf(
-                String.valueOf(
-                    new StringBuffer(String.valueOf(String.valueOf(this.name)))
-                        .append("|")
-                        .append(this.sessionID)
-                        .append("\n")
-                        .append(this.hero.toString()))));
+    Buffer buf = FileLoader.saveHero(this.name, this.hero.toString());
+    System.out.println("saveHero " + buf);
     if (!buf.isError()) {
       return true;
     }
@@ -209,7 +188,7 @@ public class Player implements Constants {
   }
 
   public void saveScore() {
-    Loader.cgi(
+    FileLoader.cgi(
         Loader.SAVESCORE,
         String.valueOf(
             String.valueOf(
