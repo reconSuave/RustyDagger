@@ -93,7 +93,7 @@ public class arCreate extends Screen {
   @Override // DCourt.Screens.Screen
   public void update(Graphics g) {
     getPic(1).show(getBuild() == 0);
-    update(g);
+    super.update(g);
   }
 
   @Override // DCourt.Screens.Screen
@@ -155,6 +155,7 @@ public class arCreate extends Screen {
         if (this.traits[ix2].getState() && getBuild() < 0) {
           this.traits[ix2].setState(false);
         }
+        break;
       }
     }
     if (e.target == getPic(0)) {
@@ -327,5 +328,6 @@ public class arCreate extends Screen {
     if (isGuild()) {
       hero.fixStatTrait(Constants.GUILD);
     }
+    System.out.println("createHero: " + hero.toString());
   }
 }

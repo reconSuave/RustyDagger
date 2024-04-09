@@ -94,7 +94,9 @@ public abstract class Smith extends Shop {
     if (cost <= Screen.getMoney()) {
       Screen.subMoney(cost);
       Screen.getPack().insert(it.copy());
+      /* don't switch to Sell list after buy
       setMode(1);
+      */
       shopList(it);
     }
   }

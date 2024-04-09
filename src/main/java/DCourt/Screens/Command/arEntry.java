@@ -185,36 +185,31 @@ public class arEntry extends Screen
   public void keyTyped(KeyEvent e) {}
 
   Screen EnterGame() {
+    System.out.println("EnterGame");
     int a = 0;
-    System.out.println("EnterGame: " + a);
     a += 1;
     String name = scoreString(this.nameTXF.getText());
     String pass = scoreString(this.passTXF.getText());
-    System.out.println("EnterGame: " + a);
     a += 1;
     Player player = Tools.getPlayer();
-    System.out.println("EnterGame: " + a);
     a += 1;
     if (!player.loadHero(name, pass)) {
       System.out.println("error loadHero EnterGame: " + a);
       a += 1;
       return player.errorScreen(this);
     }
-    System.out.println("EnterGame: " + a);
     a += 1;
     if (player.getHero() == null) {
       System.out.println("error getHero EnterGame: " + a);
       a += 1;
       return new arCreate(player);
     }
-    System.out.println("EnterGame: " + a);
     a += 1;
     if (player.isDead()) {
       System.out.println("Dead EnterGame: " + a);
       a += 1;
       return new arNotice(this, GameStrings.heroHasDied);
     }
-    System.out.println("EnterGame: " + a);
     a += 1;
     PlaceTable lot = Tools.getPlaceTable();
     lot.select(player.getPlace());
@@ -287,11 +282,6 @@ public class arEntry extends Screen
     this.passTXF.reshape(100, 260, 120, 22);
     this.passTXF.addKeyListener(this);
 
-    /* for Debug */
-    this.nameTXF.setText("murlock42");
-    this.passTXF.setText("secret");
-    getPic(0).show(true);
-
     this.lists = new Button("Lists");
     this.lists.reshape(340, 232, 55, 20);
     this.lists.addActionListener(this);
@@ -309,7 +299,10 @@ public class arEntry extends Screen
   }
 
   public boolean testNames() {
-    return this.nameTXF.getText().length() >= 4 && this.passTXF.getText().length() >= 4;
+    return this.nameTXF.getText().length() >= 4;
+    /* no password with local storage
+    && this.passTXF.getText().length() >= 4;
+    */
   }
 
   public String scoreString(String msg) {

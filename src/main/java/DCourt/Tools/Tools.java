@@ -10,6 +10,8 @@ import DCourt.Items.List.itHero;
 import DCourt.Screens.Screen;
 import java.awt.Font;
 import java.awt.Image;
+import java.io.DataInputStream;
+import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Enumeration;
@@ -194,37 +196,50 @@ public class Tools {
     return getHero().getState();
   }
 
+  private static Image loadImageFromJar(String path) {
+    Image tmp;
+
+    try {
+      InputStream inputStream = papa.getClass().getResourceAsStream("/" + path);
+      if (inputStream != null) {
+        byte[] buf = new byte[inputStream.available()];
+        DataInputStream dataInputStream = new DataInputStream(inputStream);
+        dataInputStream.readFully(buf);
+        tmp = papa.getToolkit().createImage(buf);
+        storeResource(path, tmp);
+        return tmp;
+      }
+      System.out.println("resource not found: " + path);
+    } catch (Exception e) {
+      System.out.println("Failed to load " + path + ":" + e.toString());
+    }
+    return null;
+  }
+
   public static Image loadImage(String path) {
     Image tmp;
-    String artpath = papa.getArtpath();
+
     if (path == null) {
-      System.out.println("getArtpath() returned null");
       return null;
     }
-    Image tmp2 = (Image) findResource(path);
-    if (tmp2 != null) {
-      return tmp2;
+
+    tmp = (Image) findResource(path);
+    if (tmp != null) {
+      return tmp;
     }
+
+    tmp = loadImageFromJar(path);
+    if (tmp != null) {
+      return tmp;
+    }
+
+    String artPath = papa.getArtpath();
+
     if (!papa.isInBrowser()) {
-      tmp =
-          papa.getToolkit()
-              .getImage(
-                  String.valueOf(
-                      String.valueOf(
-                          new StringBuffer(String.valueOf(String.valueOf(artpath)))
-                              .append("/")
-                              .append(path))));
+      tmp = papa.getToolkit().getImage(artPath + "/" + path);
     } else {
       try {
-        tmp =
-            papa.getToolkit()
-                .getImage(
-                    new URL(
-                        String.valueOf(
-                            String.valueOf(
-                                new StringBuffer(String.valueOf(String.valueOf(artpath)))
-                                    .append("/")
-                                    .append(path)))));
+        tmp = papa.getToolkit().getImage(new URL(artPath + "/" + path));
       } catch (MalformedURLException e) {
         System.out.println("Failed to retrieve " + path);
         return null;

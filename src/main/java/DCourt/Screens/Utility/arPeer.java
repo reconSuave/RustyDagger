@@ -10,7 +10,7 @@ import DCourt.Screens.Screen;
 import DCourt.Static.ArmsTrait;
 import DCourt.Static.Constants;
 import DCourt.Tools.Buffer;
-import DCourt.Tools.Loader;
+import DCourt.Tools.FileLoader;
 import DCourt.Tools.MadLib;
 import DCourt.Tools.Tools;
 import java.awt.Button;
@@ -188,7 +188,7 @@ public class arPeer extends arNotice {
       if (this.spend == 2) {
         h.subPack(SEEKGEM, 3);
       }
-      Buffer buf = Loader.cgiBuffer(Loader.READHERO, this.pname);
+      Buffer buf = FileLoader.loadHero(this.pname);
       if (buf == null || buf.isEmpty() || buf.isError()) {
         setMessage(
             String.valueOf(
